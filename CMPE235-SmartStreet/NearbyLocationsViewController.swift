@@ -8,6 +8,9 @@
 
 import UIKit
 import GoogleMaps
+//import PXGoogleDirections
+
+
 
 class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationControllerDelegate{
     
@@ -15,6 +18,9 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
     var placesClient: GMSPlacesClient?
     let dataProvider = GoogleDataProvider()
     let searchRadius: Double = 1000
+    var routeIndex: Int = 0
+    
+    @IBOutlet weak var drivingDirections: UISegmentedControl!
     
     let locationManager = CLLocationManager()
     
@@ -26,6 +32,10 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
     @IBOutlet weak var mapCenterPinImage: UIImageView!
     @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
     var searchedTypes = ["bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
+    
+    private var directionsAPI: PXGoogleDirections {
+        return (UIApplication.sharedApplication().delegate as! AppDelegate).directionsAPI
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +70,7 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
         geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
             self.addressLabel.unlock()
             if let address = response?.firstResult() {
-                let lines = address.lines! as [String]
+                let lines = address.lines! as! [String]
                 self.addressLabel.text = lines.joinWithSeparator("\n")
                 let labelHeight = self.addressLabel.intrinsicContentSize().height
                 self.mapView.padding = UIEdgeInsets(top: self.topLayoutGuide.length, left: 0,
@@ -74,7 +84,7 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
     }
     
     func fetchNearbyPlaces(coordinate: CLLocationCoordinate2D) {
-      
+        
         mapView.clear()
         dataProvider.fetchPlacesNearCoordinate(coordinate, radius:searchRadius, types: searchedTypes) { places in
             for place: GooglePlace in places {
@@ -84,18 +94,55 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
         }
     }
     
+    func updateRoutes(results:[PXGoogleDirectionsRoute]) {
+        mapView.clear()
+        for i in 0 ..< (results).count {
+            if i != routeIndex {
+                results[i].drawOnMap(mapView, strokeColor: UIColor.lightGrayColor(), strokeWidth: 3.0)
+            }
+        }
+        mapView.animateWithCameraUpdate(GMSCameraUpdate.fitBounds(results[routeIndex].bounds!, withPadding: 40.0))
+        results[routeIndex].drawOnMap(mapView, strokeColor: UIColor.purpleColor(), strokeWidth: 4.0)
+        results[routeIndex].drawOriginMarkerOnMap(mapView, title: "Origin", color: UIColor.greenColor(), opacity: 1.0, flat: true)
+        results[routeIndex].drawDestinationMarkerOnMap(mapView, title: "Destination", color: UIColor.redColor(), opacity: 1.0, flat: true)
+    }
+    
+    func calculateDirection(from:CLLocationCoordinate2D,to:CLLocationCoordinate2D){
+        directionsAPI.delegate = self
+		directionsAPI.from = PXLocation.CoordinateLocation(from)
+		directionsAPI.to = PXLocation.CoordinateLocation(to)
+		directionsAPI.mode = modeFromField()
+        directionsAPI.calculateDirections { (response) -> Void in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                switch response {
+                case let .Error(_, error):
+                    let alert = UIAlertController(title: "PXGoogleDirectionsSample", message: "Error: \(error.localizedDescription)", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                case let .Success(_, routes):
+                    self.updateRoutes(routes)
+                }
+            })
+        }}
+    
+    
+    
     func  showPopup(){
-            let popoverContent = (self.storyboard?.instantiateViewControllerWithIdentifier("DirectionTypes"))! as UIViewController
-            let nav = UINavigationController(rootViewController: popoverContent)
-            nav.modalPresentationStyle = UIModalPresentationStyle.Popover
-            let popover = nav.popoverPresentationController
-            popoverContent.preferredContentSize = CGSizeMake(500,600)
-            popover!.delegate = self
-            popover!.sourceView = self.view
-            popover!.sourceRect = CGRectMake(100,100,0,0)
+        let popoverContent = (self.storyboard?.instantiateViewControllerWithIdentifier("DirectionTypes"))! as UIViewController
+        let nav = UINavigationController(rootViewController: popoverContent)
+        nav.modalPresentationStyle = UIModalPresentationStyle.Popover
+        let popover = nav.popoverPresentationController
+        popoverContent.preferredContentSize = CGSizeMake(500,600)
+        popover!.delegate = self
+        popover!.sourceView = self.view
+        popover!.sourceRect = CGRectMake(100,100,0,0)
         
-            self.presentViewController(nav, animated: true, completion: nil)
-
+        self.presentViewController(nav, animated: true, completion: nil)
+        
+    }
+    
+    private func modeFromField() -> PXGoogleDirectionsMode {
+        return PXGoogleDirectionsMode(rawValue: drivingDirections.selectedSegmentIndex)!
     }
     
     @IBAction func getCurrentPlace(sender: UIButton) {
@@ -133,6 +180,38 @@ extension NearbyLocationsViewController: TypesTableViewControllerDelegate {
     }
 }
 
+
+extension NearbyLocationsViewController: PXGoogleDirectionsDelegate {
+    func googleDirectionsWillSendRequestToAPI(googleDirections: PXGoogleDirections, withURL requestURL: NSURL) -> Bool {
+        NSLog("googleDirectionsWillSendRequestToAPI:withURL:")
+        return true
+    }
+    
+    func googleDirectionsDidSendRequestToAPI(googleDirections: PXGoogleDirections, withURL requestURL: NSURL) {
+        NSLog("googleDirectionsDidSendRequestToAPI:withURL:")
+        NSLog("\(requestURL.absoluteString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)")
+    }
+    
+    func googleDirections(googleDirections: PXGoogleDirections, didReceiveRawDataFromAPI data: NSData) {
+        NSLog("googleDirections:didReceiveRawDataFromAPI:")
+        NSLog(NSString(data: data, encoding: NSUTF8StringEncoding) as! String)
+    }
+    
+    func googleDirectionsRequestDidFail(googleDirections: PXGoogleDirections, withError error: NSError) {
+        NSLog("googleDirectionsRequestDidFail:withError:")
+        NSLog("\(error)")
+    }
+    
+    func googleDirections(googleDirections: PXGoogleDirections, didReceiveResponseFromAPI apiResponse: [PXGoogleDirectionsRoute]) {
+        NSLog("googleDirections:didReceiveResponseFromAPI:")
+        NSLog("Got \(apiResponse.count) routes")
+        for i in 0 ..< apiResponse.count {
+            NSLog("Route \(i) has \(apiResponse[i].legs.count) legs")
+        }
+    }
+}
+
+
 extension NearbyLocationsViewController: GMSMapViewDelegate {
     func mapView(mapView: GMSMapView, idleAtCameraPosition position: GMSCameraPosition) {
         reverseGeocodeCoordinate(position.target)
@@ -160,28 +239,14 @@ extension NearbyLocationsViewController: GMSMapViewDelegate {
     func mapView(mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
         let placeMarker = marker as! LocationMarker
         if let infoView = UIView.viewFromNibName("MarkerInfoView") as? MarkerInfoView {
+            
             infoView.nameLabel.text = placeMarker.location.name
             if let photo = placeMarker.location.photo {
                 infoView.placePhoto.image = photo
             } else {
                 infoView.placePhoto.image = UIImage(named: "generic")
             }
-            
-            showPopup()
-            
-            
-            let path = GMSMutablePath()
-            path.addLatitude(myLocation.latitude, longitude:myLocation.longitude)
-            path.addLatitude(placeMarker.location.coordinate.latitude, longitude:placeMarker.location.coordinate.longitude) // Fiji
-           
-            
-            let polyline = GMSPolyline(path: path)
-            polyline.strokeColor = UIColor.blueColor()
-            polyline.strokeWidth = 5.0
-            polyline.map = mapView
-            
-            self.mapView = mapView
-            
+            calculateDirection(myLocation,to: placeMarker.location.coordinate)
             
             
             return infoView

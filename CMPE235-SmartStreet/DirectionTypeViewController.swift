@@ -10,6 +10,7 @@ import UIKit
 
 class DirectionTypeViewController: UIViewController {
 
+    @IBOutlet weak var modeOfDriving: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 

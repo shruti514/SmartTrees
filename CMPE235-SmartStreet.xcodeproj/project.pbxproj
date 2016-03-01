@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1C24D630F67BBB5A332030E8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A003605DE87644433636721F /* Pods.framework */; };
+		A19AC6C41C8635CC00BCABA0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6BE1C8635CC00BCABA0 /* Accelerate.framework */; };
+		A19AC6C51C8635CC00BCABA0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6BF1C8635CC00BCABA0 /* AVFoundation.framework */; };
+		A19AC6C61C8635CC00BCABA0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6C01C8635CC00BCABA0 /* CoreBluetooth.framework */; };
+		A19AC6C71C8635CC00BCABA0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6C11C8635CC00BCABA0 /* CoreData.framework */; };
+		A19AC6C81C8635CC00BCABA0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6C21C8635CC00BCABA0 /* CoreText.framework */; };
+		A19AC6C91C8635CC00BCABA0 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6C31C8635CC00BCABA0 /* GLKit.framework */; };
+		A19AC6D01C8635FF00BCABA0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6CA1C8635FF00BCABA0 /* CoreGraphics.framework */; };
+		A19AC6D11C8635FF00BCABA0 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6CB1C8635FF00BCABA0 /* ImageIO.framework */; };
+		A19AC6D21C8635FF00BCABA0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6CC1C8635FF00BCABA0 /* OpenGLES.framework */; };
+		A19AC6D31C8635FF00BCABA0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6CD1C8635FF00BCABA0 /* QuartzCore.framework */; };
+		A19AC6D41C8635FF00BCABA0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6CE1C8635FF00BCABA0 /* Security.framework */; };
+		A19AC6D51C8635FF00BCABA0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6CF1C8635FF00BCABA0 /* SystemConfiguration.framework */; };
+		A19AC6D71C8636F700BCABA0 /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6D61C8636F700BCABA0 /* libicucore.A.tbd */; };
+		A19AC6D91C86372500BCABA0 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6D81C86372500BCABA0 /* libc++.tbd */; };
+		A19AC6DB1C86373E00BCABA0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6DA1C86373E00BCABA0 /* libz.tbd */; };
+		A19AC6DF1C86487F00BCABA0 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A19AC6DE1C86487F00BCABA0 /* GoogleMaps.bundle */; };
 		A1BBFB6D1C8423C7004CE984 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A1BBFB6E1C8423C7004CE984 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A1BBFB711C842420004CE984 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -55,6 +71,23 @@
 		829A66DAA03589A768589018 /* Pods_CMPE235_SmartStreet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMPE235_SmartStreet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E8B0679EABB9A2B58FD760 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A003605DE87644433636721F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A139FFCC1C8622D1006C5314 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Pods/PXGoogleDirections/Dependencies/GoogleMaps.framework; sourceTree = "<group>"; };
+		A19AC6BE1C8635CC00BCABA0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		A19AC6BF1C8635CC00BCABA0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A19AC6C01C8635CC00BCABA0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		A19AC6C11C8635CC00BCABA0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A19AC6C21C8635CC00BCABA0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		A19AC6C31C8635CC00BCABA0 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		A19AC6CA1C8635FF00BCABA0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A19AC6CB1C8635FF00BCABA0 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		A19AC6CC1C8635FF00BCABA0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		A19AC6CD1C8635FF00BCABA0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A19AC6CE1C8635FF00BCABA0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A19AC6CF1C8635FF00BCABA0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A19AC6D61C8636F700BCABA0 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
+		A19AC6D81C86372500BCABA0 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		A19AC6DA1C86373E00BCABA0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A19AC6DE1C86487F00BCABA0 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Pods/PXGoogleDirections/Dependencies/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		A1BBFBF11C84326E004CE984 /* NearbyLocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyLocationsViewController.swift; sourceTree = "<group>"; };
 		A1BBFBF31C843788004CE984 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
 		A1BBFBF51C8439DC004CE984 /* GoogleDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
@@ -88,6 +121,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19AC6DB1C86373E00BCABA0 /* libz.tbd in Frameworks */,
+				A19AC6D91C86372500BCABA0 /* libc++.tbd in Frameworks */,
+				A19AC6D71C8636F700BCABA0 /* libicucore.A.tbd in Frameworks */,
+				A19AC6D01C8635FF00BCABA0 /* CoreGraphics.framework in Frameworks */,
+				A19AC6D11C8635FF00BCABA0 /* ImageIO.framework in Frameworks */,
+				A19AC6D21C8635FF00BCABA0 /* OpenGLES.framework in Frameworks */,
+				A19AC6D31C8635FF00BCABA0 /* QuartzCore.framework in Frameworks */,
+				A19AC6D41C8635FF00BCABA0 /* Security.framework in Frameworks */,
+				A19AC6D51C8635FF00BCABA0 /* SystemConfiguration.framework in Frameworks */,
+				A19AC6C41C8635CC00BCABA0 /* Accelerate.framework in Frameworks */,
+				A19AC6C51C8635CC00BCABA0 /* AVFoundation.framework in Frameworks */,
+				A19AC6C61C8635CC00BCABA0 /* CoreBluetooth.framework in Frameworks */,
+				A19AC6C71C8635CC00BCABA0 /* CoreData.framework in Frameworks */,
+				A19AC6C81C8635CC00BCABA0 /* CoreText.framework in Frameworks */,
+				A19AC6C91C8635CC00BCABA0 /* GLKit.framework in Frameworks */,
 				1C24D630F67BBB5A332030E8 /* Pods.framework in Frameworks */,
 				D369D35C4AD71A7AE8B02FC8 /* Pods_CMPE235_SmartStreet.framework in Frameworks */,
 			);
@@ -113,6 +161,23 @@
 		55FD4BF9EF8EB0E8A1CBB3C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A19AC6DE1C86487F00BCABA0 /* GoogleMaps.bundle */,
+				A139FFCC1C8622D1006C5314 /* GoogleMaps.framework */,
+				A19AC6DA1C86373E00BCABA0 /* libz.tbd */,
+				A19AC6D81C86372500BCABA0 /* libc++.tbd */,
+				A19AC6D61C8636F700BCABA0 /* libicucore.A.tbd */,
+				A19AC6CA1C8635FF00BCABA0 /* CoreGraphics.framework */,
+				A19AC6CB1C8635FF00BCABA0 /* ImageIO.framework */,
+				A19AC6CC1C8635FF00BCABA0 /* OpenGLES.framework */,
+				A19AC6CD1C8635FF00BCABA0 /* QuartzCore.framework */,
+				A19AC6CE1C8635FF00BCABA0 /* Security.framework */,
+				A19AC6CF1C8635FF00BCABA0 /* SystemConfiguration.framework */,
+				A19AC6BE1C8635CC00BCABA0 /* Accelerate.framework */,
+				A19AC6BF1C8635CC00BCABA0 /* AVFoundation.framework */,
+				A19AC6C01C8635CC00BCABA0 /* CoreBluetooth.framework */,
+				A19AC6C11C8635CC00BCABA0 /* CoreData.framework */,
+				A19AC6C21C8635CC00BCABA0 /* CoreText.framework */,
+				A19AC6C31C8635CC00BCABA0 /* GLKit.framework */,
 				A003605DE87644433636721F /* Pods.framework */,
 				829A66DAA03589A768589018 /* Pods_CMPE235_SmartStreet.framework */,
 			);
@@ -316,6 +381,7 @@
 				A1BBFB6E1C8423C7004CE984 /* (null) in Resources */,
 				A1D8EDAE1C80228C002D0559 /* Main.storyboard in Resources */,
 				A1BBFB721C842420004CE984 /* (null) in Resources */,
+				A19AC6DF1C86487F00BCABA0 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +541,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -494,6 +561,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					"\"GoogleMaps\"",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -519,6 +590,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -531,6 +603,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-framework",
+					"\"GoogleMaps\"",
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -568,6 +644,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "CMPE235-SmartStreetTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SJSU.CMPE235-SmartStreetTests";
@@ -580,6 +657,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "CMPE235-SmartStreetTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SJSU.CMPE235-SmartStreetTests";
@@ -591,6 +669,7 @@
 		A1D8EDD41C80228C002D0559 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "CMPE235-SmartStreetUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SJSU.CMPE235-SmartStreetUITests";
@@ -603,6 +682,7 @@
 		A1D8EDD51C80228C002D0559 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "CMPE235-SmartStreetUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SJSU.CMPE235-SmartStreetUITests";

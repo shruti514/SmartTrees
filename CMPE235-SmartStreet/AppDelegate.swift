@@ -8,16 +8,19 @@
 
 import UIKit
 import GoogleMaps
+import PXGoogleDirections
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var directionsAPI: PXGoogleDirections!
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyBUf-BSDFWvv35UDrVyAXWWr7UzezPbxQw")
+        directionsAPI = PXGoogleDirections(apiKey: "AIzaSyBob-IeBDk1h-1lPGC2Gw_u6pjEkRz59t8")
         return true
     }
 

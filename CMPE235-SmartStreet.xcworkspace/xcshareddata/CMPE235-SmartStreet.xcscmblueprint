@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3653CE37DB7881F719D1853D70FFBA294A0EC821",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3653CE37DB7881F719D1853D70FFBA294A0EC821" : 0,
+    "17714FB25C457FBD6AAD7535C7FDD8BCA8931B7A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E4C1B7F7-091E-4B0A-A237-498F55BBD353",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3653CE37DB7881F719D1853D70FFBA294A0EC821" : "CMPE235-SmartStreet\/",
+    "17714FB25C457FBD6AAD7535C7FDD8BCA8931B7A" : "CMPE235-SmartStreet\/CMPE235-SmartStreet\/PXGoogleDirections\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CMPE235-SmartStreet",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CMPE235-SmartStreet.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/poulpix\/PXGoogleDirections.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "17714FB25C457FBD6AAD7535C7FDD8BCA8931B7A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shruti514\/SmartTrees.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3653CE37DB7881F719D1853D70FFBA294A0EC821"
+    }
+  ]
+}
