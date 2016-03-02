@@ -8,7 +8,7 @@
 
 import UIKit
 import GoogleMaps
-//import PXGoogleDirections
+//import GoogleDirections
 
 
 
@@ -33,7 +33,7 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
     @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
     var searchedTypes = ["bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
     
-    private var directionsAPI: PXGoogleDirections {
+    private var directionsAPI: GoogleDirections {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).directionsAPI
     }
     
@@ -77,7 +77,7 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
                     bottom: labelHeight, right: 0)
                 
                 UIView.animateWithDuration(0.25) {
-                    self.pinImageVerticalConstraint.constant = ((labelHeight - self.topLayoutGuide.length) * 0.5)
+                    //self.pinImageVerticalConstraint.constant = ((labelHeight - self.topLayoutGuide.length) * 0.5)
                     self.view.layoutIfNeeded()
                 }            }
         }
@@ -94,7 +94,7 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
         }
     }
     
-    func updateRoutes(results:[PXGoogleDirectionsRoute]) {
+    func updateRoutes(results:[GoogleDirectionsRoute]) {
         mapView.clear()
         for i in 0 ..< (results).count {
             if i != routeIndex {
@@ -109,14 +109,14 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
     
     func calculateDirection(from:CLLocationCoordinate2D,to:CLLocationCoordinate2D){
         directionsAPI.delegate = self
-		directionsAPI.from = PXLocation.CoordinateLocation(from)
-		directionsAPI.to = PXLocation.CoordinateLocation(to)
+		directionsAPI.from = Location.CoordinateLocation(from)
+		directionsAPI.to = Location.CoordinateLocation(to)
 		directionsAPI.mode = modeFromField()
         directionsAPI.calculateDirections { (response) -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 switch response {
                 case let .Error(_, error):
-                    let alert = UIAlertController(title: "PXGoogleDirectionsSample", message: "Error: \(error.localizedDescription)", preferredStyle: UIAlertControllerStyle.Alert)
+                    let alert = UIAlertController(title: "GoogleDirectionsSample", message: "Error: \(error.localizedDescription)", preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
                 case let .Success(_, routes):
@@ -141,8 +141,8 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
         
     }
     
-    private func modeFromField() -> PXGoogleDirectionsMode {
-        return PXGoogleDirectionsMode(rawValue: drivingDirections.selectedSegmentIndex)!
+    private func modeFromField() -> GoogleDirectionsMode {
+        return GoogleDirectionsMode(rawValue: drivingDirections.selectedSegmentIndex)!
     }
     
     @IBAction func getCurrentPlace(sender: UIButton) {
@@ -181,28 +181,28 @@ extension NearbyLocationsViewController: TypesTableViewControllerDelegate {
 }
 
 
-extension NearbyLocationsViewController: PXGoogleDirectionsDelegate {
-    func googleDirectionsWillSendRequestToAPI(googleDirections: PXGoogleDirections, withURL requestURL: NSURL) -> Bool {
+extension NearbyLocationsViewController: GoogleDirectionsDelegate {
+    func googleDirectionsWillSendRequestToAPI(googleDirections: GoogleDirections, withURL requestURL: NSURL) -> Bool {
         NSLog("googleDirectionsWillSendRequestToAPI:withURL:")
         return true
     }
     
-    func googleDirectionsDidSendRequestToAPI(googleDirections: PXGoogleDirections, withURL requestURL: NSURL) {
+    func googleDirectionsDidSendRequestToAPI(googleDirections: GoogleDirections, withURL requestURL: NSURL) {
         NSLog("googleDirectionsDidSendRequestToAPI:withURL:")
         NSLog("\(requestURL.absoluteString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)")
     }
     
-    func googleDirections(googleDirections: PXGoogleDirections, didReceiveRawDataFromAPI data: NSData) {
+    func googleDirections(googleDirections: GoogleDirections, didReceiveRawDataFromAPI data: NSData) {
         NSLog("googleDirections:didReceiveRawDataFromAPI:")
         NSLog(NSString(data: data, encoding: NSUTF8StringEncoding) as! String)
     }
     
-    func googleDirectionsRequestDidFail(googleDirections: PXGoogleDirections, withError error: NSError) {
+    func googleDirectionsRequestDidFail(googleDirections: GoogleDirections, withError error: NSError) {
         NSLog("googleDirectionsRequestDidFail:withError:")
         NSLog("\(error)")
     }
     
-    func googleDirections(googleDirections: PXGoogleDirections, didReceiveResponseFromAPI apiResponse: [PXGoogleDirectionsRoute]) {
+    func googleDirections(googleDirections: GoogleDirections, didReceiveResponseFromAPI apiResponse: [GoogleDirectionsRoute]) {
         NSLog("googleDirections:didReceiveResponseFromAPI:")
         NSLog("Got \(apiResponse.count) routes")
         for i in 0 ..< apiResponse.count {

@@ -23,28 +23,28 @@
 		A19AC6D71C8636F700BCABA0 /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6D61C8636F700BCABA0 /* libicucore.A.tbd */; };
 		A19AC6D91C86372500BCABA0 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6D81C86372500BCABA0 /* libc++.tbd */; };
 		A19AC6DB1C86373E00BCABA0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6DA1C86373E00BCABA0 /* libz.tbd */; };
-		A19AC72A1C86571000BCABA0 /* PXGoogleDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7181C86571000BCABA0 /* PXGoogleDirections.swift */; };
-		A19AC72B1C86571000BCABA0 /* PXGoogleDirectionsDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7191C86571000BCABA0 /* PXGoogleDirectionsDistance.swift */; };
-		A19AC72C1C86571000BCABA0 /* PXGoogleDirectionsDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC71A1C86571000BCABA0 /* PXGoogleDirectionsDuration.swift */; };
-		A19AC72D1C86571000BCABA0 /* PXGoogleDirectionsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC71B1C86571000BCABA0 /* PXGoogleDirectionsEnums.swift */; };
-		A19AC72E1C86571000BCABA0 /* PXGoogleDirectionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC71C1C86571000BCABA0 /* PXGoogleDirectionsResponse.swift */; };
-		A19AC72F1C86571000BCABA0 /* PXGoogleDirectionsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC71D1C86571000BCABA0 /* PXGoogleDirectionsRoute.swift */; };
-		A19AC7301C86571000BCABA0 /* PXGoogleDirectionsRouteFare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC71E1C86571000BCABA0 /* PXGoogleDirectionsRouteFare.swift */; };
-		A19AC7311C86571000BCABA0 /* PXGoogleDirectionsRouteLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC71F1C86571000BCABA0 /* PXGoogleDirectionsRouteLeg.swift */; };
-		A19AC7321C86571000BCABA0 /* PXGoogleDirectionsRouteLegStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7201C86571000BCABA0 /* PXGoogleDirectionsRouteLegStep.swift */; };
-		A19AC7331C86571000BCABA0 /* PXGoogleDirectionsRouteLegStepTransitDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7211C86571000BCABA0 /* PXGoogleDirectionsRouteLegStepTransitDetails.swift */; };
-		A19AC7341C86571000BCABA0 /* PXGoogleDirectionsStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7221C86571000BCABA0 /* PXGoogleDirectionsStop.swift */; };
-		A19AC7351C86571000BCABA0 /* PXGoogleDirectionsTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7231C86571000BCABA0 /* PXGoogleDirectionsTime.swift */; };
-		A19AC7361C86571000BCABA0 /* PXGoogleDirectionsTransitAgency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7241C86571000BCABA0 /* PXGoogleDirectionsTransitAgency.swift */; };
-		A19AC7371C86571000BCABA0 /* PXGoogleDirectionsTransitLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7251C86571000BCABA0 /* PXGoogleDirectionsTransitLine.swift */; };
-		A19AC7381C86571000BCABA0 /* PXGoogleDirectionsTransitLineVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7261C86571000BCABA0 /* PXGoogleDirectionsTransitLineVehicle.swift */; };
-		A19AC7391C86571000BCABA0 /* PXLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7271C86571000BCABA0 /* PXLocation.swift */; };
-		A19AC73A1C86571000BCABA0 /* PXTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7281C86571000BCABA0 /* PXTime.swift */; };
-		A19AC73D1C865F1500BCABA0 /* PXUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC73C1C865F1500BCABA0 /* PXUtils.swift */; };
 		A19AC7411C86876C00BCABA0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC73E1C86876C00BCABA0 /* FBSDKCoreKit.framework */; };
 		A19AC7421C86876D00BCABA0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC73F1C86876C00BCABA0 /* FBSDKLoginKit.framework */; };
 		A19AC7431C86876D00BCABA0 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC7401C86876C00BCABA0 /* FBSDKShareKit.framework */; };
 		A19AC7551C86921B00BCABA0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7541C86921B00BCABA0 /* LoginViewController.swift */; };
+		A19AC7651C86AEE900BCABA0 /* GoogleDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7561C86AEE900BCABA0 /* GoogleDirections.swift */; };
+		A19AC7661C86AEE900BCABA0 /* GoogleDirectionsDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7571C86AEE900BCABA0 /* GoogleDirectionsDistance.swift */; };
+		A19AC7671C86AEE900BCABA0 /* GoogleDirectionsDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7581C86AEE900BCABA0 /* GoogleDirectionsDuration.swift */; };
+		A19AC7681C86AEE900BCABA0 /* GoogleDirectionsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7591C86AEE900BCABA0 /* GoogleDirectionsEnums.swift */; };
+		A19AC7691C86AEE900BCABA0 /* GoogleDirectionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC75A1C86AEE900BCABA0 /* GoogleDirectionsResponse.swift */; };
+		A19AC76A1C86AEE900BCABA0 /* GoogleDirectionsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC75B1C86AEE900BCABA0 /* GoogleDirectionsRoute.swift */; };
+		A19AC76B1C86AEE900BCABA0 /* GoogleDirectionsRouteFare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC75C1C86AEE900BCABA0 /* GoogleDirectionsRouteFare.swift */; };
+		A19AC76C1C86AEE900BCABA0 /* GoogleDirectionsRouteLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC75D1C86AEE900BCABA0 /* GoogleDirectionsRouteLeg.swift */; };
+		A19AC76D1C86AEE900BCABA0 /* GoogleDirectionsRouteLegStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC75E1C86AEE900BCABA0 /* GoogleDirectionsRouteLegStep.swift */; };
+		A19AC76E1C86AEE900BCABA0 /* GoogleDirectionsRouteLegStepTransitDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC75F1C86AEE900BCABA0 /* GoogleDirectionsRouteLegStepTransitDetails.swift */; };
+		A19AC76F1C86AEE900BCABA0 /* GoogleDirectionsStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7601C86AEE900BCABA0 /* GoogleDirectionsStop.swift */; };
+		A19AC7701C86AEE900BCABA0 /* GoogleDirectionsTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7611C86AEE900BCABA0 /* GoogleDirectionsTime.swift */; };
+		A19AC7711C86AEE900BCABA0 /* GoogleDirectionsTransitAgency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7621C86AEE900BCABA0 /* GoogleDirectionsTransitAgency.swift */; };
+		A19AC7721C86AEE900BCABA0 /* GoogleDirectionsTransitLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7631C86AEE900BCABA0 /* GoogleDirectionsTransitLine.swift */; };
+		A19AC7731C86AEE900BCABA0 /* GoogleDirectionsTransitLineVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7641C86AEE900BCABA0 /* GoogleDirectionsTransitLineVehicle.swift */; };
+		A19AC7751C86AF0300BCABA0 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7741C86AF0300BCABA0 /* Location.swift */; };
+		A19AC7791C86AF1600BCABA0 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7761C86AF1600BCABA0 /* Time.swift */; };
+		A19AC77B1C86AF1600BCABA0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7781C86AF1600BCABA0 /* Utils.swift */; };
 		A1BBFB6D1C8423C7004CE984 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A1BBFB6E1C8423C7004CE984 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A1BBFB711C842420004CE984 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -109,28 +109,28 @@
 		A19AC6D81C86372500BCABA0 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		A19AC6DA1C86373E00BCABA0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A19AC6DE1C86487F00BCABA0 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Pods/PXGoogleDirections/Dependencies/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		A19AC7181C86571000BCABA0 /* PXGoogleDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirections.swift; sourceTree = "<group>"; };
-		A19AC7191C86571000BCABA0 /* PXGoogleDirectionsDistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirectionsDistance.swift; sourceTree = "<group>"; };
-		A19AC71A1C86571000BCABA0 /* PXGoogleDirectionsDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirectionsDuration.swift; sourceTree = "<group>"; };
-		A19AC71B1C86571000BCABA0 /* PXGoogleDirectionsEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirectionsEnums.swift; sourceTree = "<group>"; };
-		A19AC71C1C86571000BCABA0 /* PXGoogleDirectionsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirectionsResponse.swift; sourceTree = "<group>"; };
-		A19AC71D1C86571000BCABA0 /* PXGoogleDirectionsRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirectionsRoute.swift; sourceTree = "<group>"; };
-		A19AC71E1C86571000BCABA0 /* PXGoogleDirectionsRouteFare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirectionsRouteFare.swift; sourceTree = "<group>"; };
-		A19AC71F1C86571000BCABA0 /* PXGoogleDirectionsRouteLeg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirectionsRouteLeg.swift; sourceTree = "<group>"; };
-		A19AC7201C86571000BCABA0 /* PXGoogleDirectionsRouteLegStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirectionsRouteLegStep.swift; sourceTree = "<group>"; };
-		A19AC7211C86571000BCABA0 /* PXGoogleDirectionsRouteLegStepTransitDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirectionsRouteLegStepTransitDetails.swift; sourceTree = "<group>"; };
-		A19AC7221C86571000BCABA0 /* PXGoogleDirectionsStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirectionsStop.swift; sourceTree = "<group>"; };
-		A19AC7231C86571000BCABA0 /* PXGoogleDirectionsTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirectionsTime.swift; sourceTree = "<group>"; };
-		A19AC7241C86571000BCABA0 /* PXGoogleDirectionsTransitAgency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirectionsTransitAgency.swift; sourceTree = "<group>"; };
-		A19AC7251C86571000BCABA0 /* PXGoogleDirectionsTransitLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirectionsTransitLine.swift; sourceTree = "<group>"; };
-		A19AC7261C86571000BCABA0 /* PXGoogleDirectionsTransitLineVehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirectionsTransitLineVehicle.swift; sourceTree = "<group>"; };
-		A19AC7271C86571000BCABA0 /* PXLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXLocation.swift; sourceTree = "<group>"; };
-		A19AC7281C86571000BCABA0 /* PXTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXTime.swift; sourceTree = "<group>"; };
-		A19AC73C1C865F1500BCABA0 /* PXUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXUtils.swift; sourceTree = "<group>"; };
 		A19AC73E1C86876C00BCABA0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		A19AC73F1C86876C00BCABA0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		A19AC7401C86876C00BCABA0 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		A19AC7541C86921B00BCABA0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A19AC7561C86AEE900BCABA0 /* GoogleDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirections.swift; sourceTree = "<group>"; };
+		A19AC7571C86AEE900BCABA0 /* GoogleDirectionsDistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionsDistance.swift; sourceTree = "<group>"; };
+		A19AC7581C86AEE900BCABA0 /* GoogleDirectionsDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionsDuration.swift; sourceTree = "<group>"; };
+		A19AC7591C86AEE900BCABA0 /* GoogleDirectionsEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionsEnums.swift; sourceTree = "<group>"; };
+		A19AC75A1C86AEE900BCABA0 /* GoogleDirectionsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionsResponse.swift; sourceTree = "<group>"; };
+		A19AC75B1C86AEE900BCABA0 /* GoogleDirectionsRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionsRoute.swift; sourceTree = "<group>"; };
+		A19AC75C1C86AEE900BCABA0 /* GoogleDirectionsRouteFare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionsRouteFare.swift; sourceTree = "<group>"; };
+		A19AC75D1C86AEE900BCABA0 /* GoogleDirectionsRouteLeg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionsRouteLeg.swift; sourceTree = "<group>"; };
+		A19AC75E1C86AEE900BCABA0 /* GoogleDirectionsRouteLegStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionsRouteLegStep.swift; sourceTree = "<group>"; };
+		A19AC75F1C86AEE900BCABA0 /* GoogleDirectionsRouteLegStepTransitDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionsRouteLegStepTransitDetails.swift; sourceTree = "<group>"; };
+		A19AC7601C86AEE900BCABA0 /* GoogleDirectionsStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionsStop.swift; sourceTree = "<group>"; };
+		A19AC7611C86AEE900BCABA0 /* GoogleDirectionsTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionsTime.swift; sourceTree = "<group>"; };
+		A19AC7621C86AEE900BCABA0 /* GoogleDirectionsTransitAgency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionsTransitAgency.swift; sourceTree = "<group>"; };
+		A19AC7631C86AEE900BCABA0 /* GoogleDirectionsTransitLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionsTransitLine.swift; sourceTree = "<group>"; };
+		A19AC7641C86AEE900BCABA0 /* GoogleDirectionsTransitLineVehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionsTransitLineVehicle.swift; sourceTree = "<group>"; };
+		A19AC7741C86AF0300BCABA0 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A19AC7761C86AF1600BCABA0 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		A19AC7781C86AF1600BCABA0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A1BBFBF11C84326E004CE984 /* NearbyLocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyLocationsViewController.swift; sourceTree = "<group>"; };
 		A1BBFBF31C843788004CE984 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
 		A1BBFBF51C8439DC004CE984 /* GoogleDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
@@ -236,24 +236,24 @@
 		A19AC6EA1C86554100BCABA0 /* Directions */ = {
 			isa = PBXGroup;
 			children = (
-				A19AC73C1C865F1500BCABA0 /* PXUtils.swift */,
-				A19AC7181C86571000BCABA0 /* PXGoogleDirections.swift */,
-				A19AC7191C86571000BCABA0 /* PXGoogleDirectionsDistance.swift */,
-				A19AC71A1C86571000BCABA0 /* PXGoogleDirectionsDuration.swift */,
-				A19AC71B1C86571000BCABA0 /* PXGoogleDirectionsEnums.swift */,
-				A19AC71C1C86571000BCABA0 /* PXGoogleDirectionsResponse.swift */,
-				A19AC71D1C86571000BCABA0 /* PXGoogleDirectionsRoute.swift */,
-				A19AC71E1C86571000BCABA0 /* PXGoogleDirectionsRouteFare.swift */,
-				A19AC71F1C86571000BCABA0 /* PXGoogleDirectionsRouteLeg.swift */,
-				A19AC7201C86571000BCABA0 /* PXGoogleDirectionsRouteLegStep.swift */,
-				A19AC7211C86571000BCABA0 /* PXGoogleDirectionsRouteLegStepTransitDetails.swift */,
-				A19AC7221C86571000BCABA0 /* PXGoogleDirectionsStop.swift */,
-				A19AC7231C86571000BCABA0 /* PXGoogleDirectionsTime.swift */,
-				A19AC7241C86571000BCABA0 /* PXGoogleDirectionsTransitAgency.swift */,
-				A19AC7251C86571000BCABA0 /* PXGoogleDirectionsTransitLine.swift */,
-				A19AC7261C86571000BCABA0 /* PXGoogleDirectionsTransitLineVehicle.swift */,
-				A19AC7271C86571000BCABA0 /* PXLocation.swift */,
-				A19AC7281C86571000BCABA0 /* PXTime.swift */,
+				A19AC7561C86AEE900BCABA0 /* GoogleDirections.swift */,
+				A19AC7571C86AEE900BCABA0 /* GoogleDirectionsDistance.swift */,
+				A19AC7581C86AEE900BCABA0 /* GoogleDirectionsDuration.swift */,
+				A19AC7591C86AEE900BCABA0 /* GoogleDirectionsEnums.swift */,
+				A19AC75A1C86AEE900BCABA0 /* GoogleDirectionsResponse.swift */,
+				A19AC75B1C86AEE900BCABA0 /* GoogleDirectionsRoute.swift */,
+				A19AC75C1C86AEE900BCABA0 /* GoogleDirectionsRouteFare.swift */,
+				A19AC75D1C86AEE900BCABA0 /* GoogleDirectionsRouteLeg.swift */,
+				A19AC75E1C86AEE900BCABA0 /* GoogleDirectionsRouteLegStep.swift */,
+				A19AC7741C86AF0300BCABA0 /* Location.swift */,
+				A19AC75F1C86AEE900BCABA0 /* GoogleDirectionsRouteLegStepTransitDetails.swift */,
+				A19AC7601C86AEE900BCABA0 /* GoogleDirectionsStop.swift */,
+				A19AC7761C86AF1600BCABA0 /* Time.swift */,
+				A19AC7781C86AF1600BCABA0 /* Utils.swift */,
+				A19AC7611C86AEE900BCABA0 /* GoogleDirectionsTime.swift */,
+				A19AC7621C86AEE900BCABA0 /* GoogleDirectionsTransitAgency.swift */,
+				A19AC7631C86AEE900BCABA0 /* GoogleDirectionsTransitLine.swift */,
+				A19AC7641C86AEE900BCABA0 /* GoogleDirectionsTransitLineVehicle.swift */,
 			);
 			name = Directions;
 			sourceTree = "<group>";
@@ -529,38 +529,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19AC7791C86AF1600BCABA0 /* Time.swift in Sources */,
+				A19AC76B1C86AEE900BCABA0 /* GoogleDirectionsRouteFare.swift in Sources */,
+				A19AC76C1C86AEE900BCABA0 /* GoogleDirectionsRouteLeg.swift in Sources */,
 				A1BBFBFA1C843ABD004CE984 /* MarkerInfoView.swift in Sources */,
 				A1BBFBF21C84326E004CE984 /* NearbyLocationsViewController.swift in Sources */,
+				A19AC76D1C86AEE900BCABA0 /* GoogleDirectionsRouteLegStep.swift in Sources */,
+				A19AC76A1C86AEE900BCABA0 /* GoogleDirectionsRoute.swift in Sources */,
+				A19AC76F1C86AEE900BCABA0 /* GoogleDirectionsStop.swift in Sources */,
 				A1BBFC021C850275004CE984 /* LocationMarker.swift in Sources */,
-				A19AC73D1C865F1500BCABA0 /* PXUtils.swift in Sources */,
 				A1BBFBFC1C843B1A004CE984 /* UIViewExtension.swift in Sources */,
 				A1FC18F11C83837F00D5A663 /* AboutViewController.swift in Sources */,
 				A1FC18F31C83865200D5A663 /* MenuTransitionManager.swift in Sources */,
-				A19AC7361C86571000BCABA0 /* PXGoogleDirectionsTransitAgency.swift in Sources */,
-				A19AC72F1C86571000BCABA0 /* PXGoogleDirectionsRoute.swift in Sources */,
-				A19AC7301C86571000BCABA0 /* PXGoogleDirectionsRouteFare.swift in Sources */,
+				A19AC7651C86AEE900BCABA0 /* GoogleDirections.swift in Sources */,
+				A19AC7681C86AEE900BCABA0 /* GoogleDirectionsEnums.swift in Sources */,
 				A1D8EDA71C80228C002D0559 /* AppDelegate.swift in Sources */,
+				A19AC7731C86AEE900BCABA0 /* GoogleDirectionsTransitLineVehicle.swift in Sources */,
+				A19AC7691C86AEE900BCABA0 /* GoogleDirectionsResponse.swift in Sources */,
+				A19AC76E1C86AEE900BCABA0 /* GoogleDirectionsRouteLegStepTransitDetails.swift in Sources */,
 				A1FC18EF1C83835B00D5A663 /* MenuViewController.swift in Sources */,
+				A19AC7701C86AEE900BCABA0 /* GoogleDirectionsTime.swift in Sources */,
 				A19AC7551C86921B00BCABA0 /* LoginViewController.swift in Sources */,
-				A19AC7321C86571000BCABA0 /* PXGoogleDirectionsRouteLegStep.swift in Sources */,
-				A19AC72E1C86571000BCABA0 /* PXGoogleDirectionsResponse.swift in Sources */,
-				A19AC72C1C86571000BCABA0 /* PXGoogleDirectionsDuration.swift in Sources */,
+				A19AC7721C86AEE900BCABA0 /* GoogleDirectionsTransitLine.swift in Sources */,
 				A1BBFBF61C8439DC004CE984 /* GoogleDataProvider.swift in Sources */,
-				A19AC7391C86571000BCABA0 /* PXLocation.swift in Sources */,
-				A19AC7371C86571000BCABA0 /* PXGoogleDirectionsTransitLine.swift in Sources */,
-				A19AC7351C86571000BCABA0 /* PXGoogleDirectionsTime.swift in Sources */,
+				A19AC7751C86AF0300BCABA0 /* Location.swift in Sources */,
 				A1BBFBF41C843788004CE984 /* TypesTableViewController.swift in Sources */,
-				A19AC73A1C86571000BCABA0 /* PXTime.swift in Sources */,
-				A19AC72D1C86571000BCABA0 /* PXGoogleDirectionsEnums.swift in Sources */,
-				A19AC7311C86571000BCABA0 /* PXGoogleDirectionsRouteLeg.swift in Sources */,
+				A19AC7711C86AEE900BCABA0 /* GoogleDirectionsTransitAgency.swift in Sources */,
 				A1BBFC081C85FCEB004CE984 /* DirectionTypeViewController.swift in Sources */,
 				A1FC18F51C839F1900D5A663 /* SignUpViewController.swift in Sources */,
-				A19AC7341C86571000BCABA0 /* PXGoogleDirectionsStop.swift in Sources */,
-				A19AC7381C86571000BCABA0 /* PXGoogleDirectionsTransitLineVehicle.swift in Sources */,
-				A19AC72A1C86571000BCABA0 /* PXGoogleDirections.swift in Sources */,
-				A19AC72B1C86571000BCABA0 /* PXGoogleDirectionsDistance.swift in Sources */,
-				A19AC7331C86571000BCABA0 /* PXGoogleDirectionsRouteLegStepTransitDetails.swift in Sources */,
+				A19AC77B1C86AF1600BCABA0 /* Utils.swift in Sources */,
+				A19AC7671C86AEE900BCABA0 /* GoogleDirectionsDuration.swift in Sources */,
 				A1BBFBF81C843A71004CE984 /* GooglePlace.swift in Sources */,
+				A19AC7661C86AEE900BCABA0 /* GoogleDirectionsDistance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

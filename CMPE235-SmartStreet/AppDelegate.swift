@@ -17,7 +17,7 @@ import FBSDKLoginKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var directionsAPI: PXGoogleDirections!
+    var directionsAPI: GoogleDirections!
     let ref = Firebase(url: "https://sweltering-inferno-8277.firebaseio.com/")
     let facebookLogin = FBSDKLoginManager()
     
@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyBUf-BSDFWvv35UDrVyAXWWr7UzezPbxQw")
-        directionsAPI = PXGoogleDirections(apiKey: "AIzaSyBob-IeBDk1h-1lPGC2Gw_u6pjEkRz59t8")
+        directionsAPI = GoogleDirections(apiKey: "AIzaSyBob-IeBDk1h-1lPGC2Gw_u6pjEkRz59t8")
         let myRootRef = Firebase(url:"https://sweltering-inferno-8277.firebaseio.com/")
         // Write data to Firebase
         myRootRef.setValue("Do you have data? You'll love Firebase.")

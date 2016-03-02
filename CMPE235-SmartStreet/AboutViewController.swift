@@ -30,7 +30,7 @@ class AboutViewController: UIViewController, QRCodeReaderViewControllerDelegate{
     
     lazy var reader: QRCodeReaderViewController = {
         let builder = QRCodeViewControllerBuilder { builder in
-            builder.reader          = QRCodeReader(metadataObjectTypes: [AVMetadataObjectTypeQRCode])
+            builder.reader          = QRCodeReader(metadataObjectTypes: [AVMetadataObjectTypeQRCode,AVMetadataObjectTypeDataMatrixCode])
             builder.showTorchButton = true
         }
         
@@ -77,9 +77,19 @@ class AboutViewController: UIViewController, QRCodeReaderViewControllerDelegate{
     
     func reader(reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
         self.dismissViewControllerAnimated(true, completion: { [weak self] in
+            var message : String!
+            switch(result.metadataType){
+            case "org.iso.DataMatrix":
+                message = "Data Matrix code decoded successfully."
+                break
+             case "org.iso.QRCode":
+                message = "Qr code decoded successfully"
+                break
+            default:break
+            }
             let alert = UIAlertController(
                 title: "Voila!",
-                message: "Qr code decoded successfully",
+                message: message,
                 preferredStyle: .Alert
             )
             alert.addAction(UIAlertAction(title: "Done", style: .Cancel, handler: nil))
