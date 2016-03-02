@@ -70,7 +70,7 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
         geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
             self.addressLabel.unlock()
             if let address = response?.firstResult() {
-                let lines = address.lines! as! [String]
+                let lines = address.lines! 
                 self.addressLabel.text = lines.joinWithSeparator("\n")
                 let labelHeight = self.addressLabel.intrinsicContentSize().height
                 self.mapView.padding = UIEdgeInsets(top: self.topLayoutGuide.length, left: 0,

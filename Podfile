@@ -5,7 +5,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 # Uncomment this line if you're using Swift
 use_frameworks!
 pod 'QRCodeReader.swift', '~> 5.3.1'
-pod 'PXGoogleDirections'
+pod 'GoogleMaps'
 
 
 pod 'SwiftyJSON', '~> 2.3.0'
