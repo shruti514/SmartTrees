@@ -10,7 +10,7 @@
         <!--LoginPage-->
         <scene sceneID="QEc-6f-gDc">
             <objects>
-                <viewController title="LoginPage" id="709-v5-y5W" sceneMemberID="viewController">
+                <viewController title="LoginPage" id="709-v5-y5W" customClass="LoginViewController" customModule="CMPE235_SmartStreet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yH7-yH-OP2"/>
                         <viewControllerLayoutGuide type="bottom" id="mEF-Wn-BlZ"/>
@@ -62,7 +62,7 @@
         <!--Signup Page-->
         <scene sceneID="46L-B8-9Pa">
             <objects>
-                <viewController title="Signup Page" id="ntc-2V-MgQ" customClass="SignUpViewController" customModule="CMPE235_SmartStreet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpView" title="Signup Page" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ntc-2V-MgQ" customClass="SignUpViewController" customModule="CMPE235_SmartStreet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LtL-FR-f2L"/>
                         <viewControllerLayoutGuide type="bottom" id="vwR-IL-vlx"/>
@@ -133,7 +133,7 @@
         <!--HomePage-->
         <scene sceneID="bbw-Pl-Z6Z">
             <objects>
-                <viewController title="HomePage" id="kx9-GO-iVg" customClass="MenuViewController" customModule="CMPE235_SmartStreet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuView" title="HomePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kx9-GO-iVg" customClass="MenuViewController" customModule="CMPE235_SmartStreet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rRa-ym-qM5"/>
                         <viewControllerLayoutGuide type="bottom" id="uxN-4E-gfq"/>

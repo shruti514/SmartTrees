@@ -41,6 +41,10 @@
 		A19AC7391C86571000BCABA0 /* PXLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7271C86571000BCABA0 /* PXLocation.swift */; };
 		A19AC73A1C86571000BCABA0 /* PXTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7281C86571000BCABA0 /* PXTime.swift */; };
 		A19AC73D1C865F1500BCABA0 /* PXUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC73C1C865F1500BCABA0 /* PXUtils.swift */; };
+		A19AC7411C86876C00BCABA0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC73E1C86876C00BCABA0 /* FBSDKCoreKit.framework */; };
+		A19AC7421C86876D00BCABA0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC73F1C86876C00BCABA0 /* FBSDKLoginKit.framework */; };
+		A19AC7431C86876D00BCABA0 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC7401C86876C00BCABA0 /* FBSDKShareKit.framework */; };
+		A19AC7551C86921B00BCABA0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7541C86921B00BCABA0 /* LoginViewController.swift */; };
 		A1BBFB6D1C8423C7004CE984 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A1BBFB6E1C8423C7004CE984 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A1BBFB711C842420004CE984 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -123,6 +127,10 @@
 		A19AC7271C86571000BCABA0 /* PXLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXLocation.swift; sourceTree = "<group>"; };
 		A19AC7281C86571000BCABA0 /* PXTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXTime.swift; sourceTree = "<group>"; };
 		A19AC73C1C865F1500BCABA0 /* PXUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXUtils.swift; sourceTree = "<group>"; };
+		A19AC73E1C86876C00BCABA0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		A19AC73F1C86876C00BCABA0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		A19AC7401C86876C00BCABA0 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		A19AC7541C86921B00BCABA0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A1BBFBF11C84326E004CE984 /* NearbyLocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyLocationsViewController.swift; sourceTree = "<group>"; };
 		A1BBFBF31C843788004CE984 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
 		A1BBFBF51C8439DC004CE984 /* GoogleDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
@@ -163,11 +171,14 @@
 				A19AC6D11C8635FF00BCABA0 /* ImageIO.framework in Frameworks */,
 				A19AC6D21C8635FF00BCABA0 /* OpenGLES.framework in Frameworks */,
 				A19AC6D31C8635FF00BCABA0 /* QuartzCore.framework in Frameworks */,
+				A19AC7411C86876C00BCABA0 /* FBSDKCoreKit.framework in Frameworks */,
 				A19AC6D41C8635FF00BCABA0 /* Security.framework in Frameworks */,
 				A19AC6D51C8635FF00BCABA0 /* SystemConfiguration.framework in Frameworks */,
 				A19AC6C41C8635CC00BCABA0 /* Accelerate.framework in Frameworks */,
 				A19AC6C51C8635CC00BCABA0 /* AVFoundation.framework in Frameworks */,
+				A19AC7431C86876D00BCABA0 /* FBSDKShareKit.framework in Frameworks */,
 				A19AC6C61C8635CC00BCABA0 /* CoreBluetooth.framework in Frameworks */,
+				A19AC7421C86876D00BCABA0 /* FBSDKLoginKit.framework in Frameworks */,
 				A19AC6C71C8635CC00BCABA0 /* CoreData.framework in Frameworks */,
 				A19AC6C81C8635CC00BCABA0 /* CoreText.framework in Frameworks */,
 				A19AC6C91C8635CC00BCABA0 /* GLKit.framework in Frameworks */,
@@ -196,6 +207,9 @@
 		55FD4BF9EF8EB0E8A1CBB3C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A19AC73E1C86876C00BCABA0 /* FBSDKCoreKit.framework */,
+				A19AC73F1C86876C00BCABA0 /* FBSDKLoginKit.framework */,
+				A19AC7401C86876C00BCABA0 /* FBSDKShareKit.framework */,
 				A19AC6DE1C86487F00BCABA0 /* GoogleMaps.bundle */,
 				A139FFCC1C8622D1006C5314 /* GoogleMaps.framework */,
 				A19AC6DA1C86373E00BCABA0 /* libz.tbd */,
@@ -296,6 +310,7 @@
 				A1FC18F21C83865200D5A663 /* MenuTransitionManager.swift */,
 				A1FC18F41C839F1900D5A663 /* SignUpViewController.swift */,
 				A1BBFC001C84DE07004CE984 /* NearbyLocation */,
+				A19AC7541C86921B00BCABA0 /* LoginViewController.swift */,
 			);
 			path = "CMPE235-SmartStreet";
 			sourceTree = "<group>";
@@ -526,6 +541,7 @@
 				A19AC7301C86571000BCABA0 /* PXGoogleDirectionsRouteFare.swift in Sources */,
 				A1D8EDA71C80228C002D0559 /* AppDelegate.swift in Sources */,
 				A1FC18EF1C83835B00D5A663 /* MenuViewController.swift in Sources */,
+				A19AC7551C86921B00BCABA0 /* LoginViewController.swift in Sources */,
 				A19AC7321C86571000BCABA0 /* PXGoogleDirectionsRouteLegStep.swift in Sources */,
 				A19AC72E1C86571000BCABA0 /* PXGoogleDirectionsResponse.swift in Sources */,
 				A19AC72C1C86571000BCABA0 /* PXGoogleDirectionsDuration.swift in Sources */,
@@ -696,6 +712,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "CMPE235-SmartStreet/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SJSU.CMPE235-SmartStreet";
@@ -710,6 +730,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "CMPE235-SmartStreet/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SJSU.CMPE235-SmartStreet";

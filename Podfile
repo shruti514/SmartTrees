@@ -6,7 +6,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 pod 'QRCodeReader.swift', '~> 5.3.1'
 pod 'GoogleMaps'
-
+pod 'Firebase', '>= 2.5.0'
+pod 'FBSDKCoreKit'
+pod 'FBSDKShareKit'
+pod 'FBSDKLoginKit'
 
 pod 'SwiftyJSON', '~> 2.3.0'
 pod 'Alamofire', '~> 3.0'
