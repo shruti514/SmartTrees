@@ -25,6 +25,7 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
     let locationManager = CLLocationManager()
     
     var myLocation:CLLocationCoordinate2D!
+    var markerLocation:GooglePlace!
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
@@ -73,6 +74,7 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
                 let lines = address.lines! 
                 self.addressLabel.text = lines.joinWithSeparator("\n")
                 let labelHeight = self.addressLabel.intrinsicContentSize().height
+               
                 self.mapView.padding = UIEdgeInsets(top: self.topLayoutGuide.length, left: 0,
                     bottom: labelHeight, right: 0)
                 
@@ -81,6 +83,10 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
                     self.view.layoutIfNeeded()
                 }            }
         }
+    }
+    
+    @IBAction func handleDirectionModeChange(sender: AnyObject) {
+        calculateDirection(myLocation,to: markerLocation.coordinate)
     }
     
     func fetchNearbyPlaces(coordinate: CLLocationCoordinate2D) {
@@ -95,13 +101,13 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
     }
     
     func updateRoutes(results:[GoogleDirectionsRoute]) {
-        mapView.clear()
+       //mapView.clear()
         for i in 0 ..< (results).count {
             if i != routeIndex {
                 results[i].drawOnMap(mapView, strokeColor: UIColor.lightGrayColor(), strokeWidth: 3.0)
             }
         }
-        mapView.animateWithCameraUpdate(GMSCameraUpdate.fitBounds(results[routeIndex].bounds!, withPadding: 40.0))
+        mapView.animateWithCameraUpdate(GMSCameraUpdate.fitBounds(results[routeIndex].bounds!, withPadding: 150.0))
         results[routeIndex].drawOnMap(mapView, strokeColor: UIColor.purpleColor(), strokeWidth: 4.0)
         results[routeIndex].drawOriginMarkerOnMap(mapView, title: "Origin", color: UIColor.greenColor(), opacity: 1.0, flat: true)
         results[routeIndex].drawDestinationMarkerOnMap(mapView, title: "Destination", color: UIColor.redColor(), opacity: 1.0, flat: true)
@@ -145,6 +151,7 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
         return GoogleDirectionsMode(rawValue: drivingDirections.selectedSegmentIndex)!
     }
     
+    
     @IBAction func getCurrentPlace(sender: UIButton) {
         
         placesClient?.currentPlaceWithCallback({
@@ -180,6 +187,12 @@ extension NearbyLocationsViewController: TypesTableViewControllerDelegate {
     }
 }
 
+
+extension NearbyLocationsViewController:MarkerInfoViewDelegate{
+    func getDirections() {
+        calculateDirection(myLocation,to: markerLocation.coordinate)
+    }
+}
 
 extension NearbyLocationsViewController: GoogleDirectionsDelegate {
     func googleDirectionsWillSendRequestToAPI(googleDirections: GoogleDirections, withURL requestURL: NSURL) -> Bool {
@@ -241,11 +254,14 @@ extension NearbyLocationsViewController: GMSMapViewDelegate {
         if let infoView = UIView.viewFromNibName("MarkerInfoView") as? MarkerInfoView {
             
             infoView.nameLabel.text = placeMarker.location.name
+            infoView.placeAddress.text = placeMarker.location.address
+            markerLocation = placeMarker.location
             if let photo = placeMarker.location.photo {
                 infoView.placePhoto.image = photo
             } else {
                 infoView.placePhoto.image = UIImage(named: "generic")
             }
+          
             calculateDirection(myLocation,to: placeMarker.location.coordinate)
             
             
