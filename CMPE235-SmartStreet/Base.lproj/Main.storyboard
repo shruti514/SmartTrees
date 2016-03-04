@@ -18,28 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mycroppedImage" translatesAutoresizingMaskIntoConstraints="NO" id="LeL-NB-hwH">
-                                <rect key="frame" x="-5" y="53" width="414" height="211"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HomeScreen attemp2" translatesAutoresizingMaskIntoConstraints="NO" id="LeL-NB-hwH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg8-kh-jvc">
-                                <rect key="frame" x="197" y="595" width="24" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="button-login" translatesAutoresizingMaskIntoConstraints="NO" id="nV8-H4-DJ0">
-                                <rect key="frame" x="85" y="533" width="244" height="50"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leQ-NP-rnj">
-                                <rect key="frame" x="85" y="624" width="244" height="50"/>
-                                <state key="normal" title="Button" image="NewSignUpWIthEmail"/>
-                                <connections>
-                                    <segue destination="ntc-2V-MgQ" kind="presentation" id="2qd-Uu-TMA"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smart Streets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbG-jI-ZzJ">
-                                <rect key="frame" x="129" y="13" width="160" height="24"/>
+                                <rect key="frame" x="147" y="12" width="134" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.95294117647058818" green="0.60784313725490191" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -160,17 +144,17 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOB-nz-adL">
                                 <rect key="frame" x="52" y="315" width="105" height="105"/>
-                                <state key="normal" backgroundImage="define-location-512"/>
+                                <state key="normal" backgroundImage="map-marker-512"/>
                                 <connections>
                                     <segue destination="VWD-jE-1pJ" kind="presentation" id="8B4-Y8-uDd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cm1-SY-bes">
-                                <rect key="frame" x="269" y="302" width="105" height="105"/>
+                                <rect key="frame" x="61" y="501" width="105" height="105"/>
                                 <state key="normal" backgroundImage="photo-512 (1)"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cam-N6-rtK">
-                                <rect key="frame" x="61" y="501" width="105" height="105"/>
+                                <rect key="frame" x="274" y="302" width="105" height="105"/>
                                 <state key="normal" backgroundImage="sharethis-5-512"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dei-r9-IXY">
@@ -178,7 +162,7 @@
                                 <state key="normal" backgroundImage="message-2-512"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJu-rh-tRj">
-                                <rect key="frame" x="91" y="614" width="45" height="21"/>
+                                <rect key="frame" x="306" y="423" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -196,7 +180,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photo/Video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Te-KZ-HSE">
-                                <rect key="frame" x="279" y="415" width="95" height="21"/>
+                                <rect key="frame" x="66" y="614" width="95" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -223,6 +207,19 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invite Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8A-Q2-pEg">
+                                <rect key="frame" x="169" y="707" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmx-qn-Mti">
+                                <rect key="frame" x="189" y="647" width="63" height="58"/>
+                                <state key="normal" backgroundImage="add-user-3-512"/>
+                                <connections>
+                                    <segue destination="maw-aq-uoS" kind="presentation" id="pZz-vv-xgE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -506,6 +503,47 @@
             </objects>
             <point key="canvasLocation" x="3884" y="-744"/>
         </scene>
+        <!--Invite Friend Modal View Controller-->
+        <scene sceneID="g3C-Ju-vW4">
+            <objects>
+                <viewController id="maw-aq-uoS" customClass="InviteFriendModalViewController" customModule="CMPE235_SmartStreet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qIG-L3-Fj5"/>
+                        <viewControllerLayoutGuide type="bottom" id="wq2-2h-vZb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QzO-i9-yKJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="fne-Vg-SVC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="0.10588235294117647" green="0.15686274509803921" blue="0.23921568627450981" alpha="0.86613685344827585" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="gee-dj-AZl">
+                                <rect key="frame" x="48" y="161" width="318" height="356"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qrcode.for website" translatesAutoresizingMaskIntoConstraints="NO" id="vcF-U4-J5T">
+                                <rect key="frame" x="88" y="229" width="238" height="219"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pP9-aH-dLa">
+                                <rect key="frame" x="60" y="175" width="39" height="31"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="maw-aq-uoS" eventType="touchUpInside" id="wpT-85-MM0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEf-pY-tHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2330" y="-413"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="KD1-aa-KjA">
             <objects>
@@ -527,17 +565,20 @@
     <resources>
         <image name="Background2" width="414" height="736"/>
         <image name="ButtonScan" width="160" height="70"/>
+        <image name="HomeScreen attemp2" width="414" height="736"/>
         <image name="NewSignUpWIthEmail" width="248" height="60"/>
+        <image name="Rectangle 2" width="414" height="411"/>
+        <image name="add-user-3-512" width="205" height="190"/>
         <image name="arrow-105-512" width="512" height="512"/>
-        <image name="button-login" width="240" height="44"/>
         <image name="default_marker.png" width="22" height="39"/>
-        <image name="define-location-512" width="153" height="153"/>
+        <image name="gradient" width="414" height="736"/>
         <image name="icon-menu" width="24" height="15"/>
         <image name="info-2-513" width="142" height="142"/>
         <image name="interact wifi" width="180" height="180"/>
+        <image name="map-marker-512" width="512" height="512"/>
         <image name="message-2-512" width="146" height="146"/>
-        <image name="mycroppedImage" width="690" height="350"/>
         <image name="photo-512 (1)" width="151" height="137"/>
+        <image name="qrcode.for website" width="200" height="200"/>
         <image name="sharethis-5-512" width="141" height="141"/>
         <image name="sharethis-5-512allpages" width="161" height="161"/>
         <image name="tab bar" width="414" height="70"/>

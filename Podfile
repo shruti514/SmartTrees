@@ -10,7 +10,7 @@ pod 'Firebase', '>= 2.5.0'
 pod 'FBSDKCoreKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKLoginKit'
-
+pod 'MMDrawerController', '~> 0.5.7'
 pod 'SwiftyJSON', '~> 2.3.0'
 pod 'Alamofire', '~> 3.0'
 

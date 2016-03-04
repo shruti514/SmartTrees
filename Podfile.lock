@@ -14,6 +14,18 @@ PODS:
     - FBSDKCoreKit
   - Firebase (2.5.1)
   - GoogleMaps (1.12.3)
+  - MMDrawerController (0.5.7):
+    - MMDrawerController/Core (= 0.5.7)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
+    - MMDrawerController/MMDrawerVisualStates (= 0.5.7)
+    - MMDrawerController/Subclass (= 0.5.7)
+  - MMDrawerController/Core (0.5.7)
+  - MMDrawerController/MMDrawerBarButtonItem (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.5.7):
+    - MMDrawerController/Core
   - QRCodeReader.swift (5.3.1)
   - SwiftyJSON (2.3.2)
 
@@ -24,6 +36,7 @@ DEPENDENCIES:
   - FBSDKShareKit
   - Firebase (>= 2.5.0)
   - GoogleMaps
+  - MMDrawerController (~> 0.5.7)
   - QRCodeReader.swift (~> 5.3.1)
   - SwiftyJSON (~> 2.3.0)
 
@@ -35,6 +48,7 @@ SPEC CHECKSUMS:
   FBSDKShareKit: 54587b4624706ace1e810cf83412a918141f807a
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
   GoogleMaps: a4ac67918d0b5ba5f6b9893ac80487e357779e6c
+  MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
   QRCodeReader.swift: 6aa05e4b9123f5bbbe1e7f1d5df28d590cc56775
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
