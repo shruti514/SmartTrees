@@ -26,6 +26,7 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
     
     var myLocation:CLLocationCoordinate2D!
     var markerLocation:GooglePlace!
+    var rvc : SWRevealViewController!
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
@@ -44,8 +45,25 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
         locationManager.delegate = self
         mapView.delegate = self
         locationManager.requestWhenInUseAuthorization()
+       // rvc = self.revealViewController() as SWRevealViewController
+        
+      //  self.view.addGestureRecognizer(rvc.panGestureRecognizer())
         
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func openSlideMenu(sender: AnyObject) {
+        //rvc.pushFrontViewController(slideViewController, animated: true)
+        rvc.revealToggle(self)
+    }
+    
+    @IBAction func renderHome(sender: AnyObject) {
+        
+        
+        if let menuView = self.storyboard?.instantiateViewControllerWithIdentifier("SlideMenuConfig") as? SWRevealViewController {
+            
+            self.presentViewController(menuView, animated: true, completion: nil)
+        }
     }
     
     override func didReceiveMemoryWarning() {

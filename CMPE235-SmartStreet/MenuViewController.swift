@@ -1,4 +1,4 @@
-//
+ //
 //  MenuViewController.swift
 //  CMPE235-SmartStreet
 //
@@ -11,6 +11,8 @@ import UIKit
 class MenuViewController: UIViewController {
     
     let transitionManager = MenuTransitionManager()
+    var slideViewController = SlideViewController!()
+    var rvc : SWRevealViewController!
     
     
     @IBOutlet weak var aboutButton: UIButton!
@@ -32,16 +34,71 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var commentLabel: UILabel!
     
     
+    @IBOutlet weak var openSlideMenu: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.transitioningDelegate = self.transitionManager
+       // self.parentViewController = SWRevealViewController()
+       
+         slideViewController = storyboard?.instantiateViewControllerWithIdentifier("SlideViewController") as! SlideViewController
+        rvc = self.revealViewController() as SWRevealViewController
+        rvc.setFrontViewController(self, animated: true)
+        rvc.setRearViewController(slideViewController, animated: true)
+        self.view.addGestureRecognizer(rvc.panGestureRecognizer())
+        
     }
+    
+    
+    @IBAction func openAboutScreen(sender: AnyObject) {
+       let aboutController = storyboard?.instantiateViewControllerWithIdentifier("AboutViewController") as! AboutViewController
+       // self.revealViewController().setFrontViewController(aboutController, animated: true)
+        self.revealViewController().pushFrontViewController(aboutController, animated: true)
+        
+    }
+    
+    @IBAction func openMapScreen(sender: AnyObject) {
+        let mapController = storyboard?.instantiateViewControllerWithIdentifier("MapView") as! NearbyLocationsViewController
+        // self.revealViewController().setFrontViewController(aboutController, animated: true)
+        self.revealViewController().pushFrontViewController(mapController, animated: true)
+        
+    }
+    
+    
+    @IBAction func openMediaScreen(sender: AnyObject) {
+        let mediaController = storyboard?.instantiateViewControllerWithIdentifier("MediaController") as! MediaViewController
+       
+        self.revealViewController().pushFrontViewController(mediaController, animated: true)
+        
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func openInviteFriends(sender: AnyObject) {
+        //let modalViewController = ShareModalViewController()
+        let shareModal = storyboard?.instantiateViewControllerWithIdentifier("InviteFriends") as! InviteFriendModalViewController
+        shareModal.modalPresentationStyle = .OverCurrentContext
+        self.presentViewController(shareModal, animated: true, completion: nil)        
+        
+    }
+    
+    
+    
+    @IBAction func openSlideMenu(sender: AnyObject) {
+        //rvc.pushFrontViewController(slideViewController, animated: true)
+        rvc.revealToggle(self)
+    }
+    
+    @IBAction func openCommentsScreen(sender: AnyObject) {
+        //let modalViewController = ShareModalViewController()
+        let commentsViewController = storyboard?.instantiateViewControllerWithIdentifier("CommentsViewController") as! CommentsViewController
+        commentsViewController.modalPresentationStyle = .OverCurrentContext
+        self.presentViewController(commentsViewController, animated: true, completion: nil)
     }
     
 

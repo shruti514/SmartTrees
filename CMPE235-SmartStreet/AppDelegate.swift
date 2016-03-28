@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     var directionsAPI: GoogleDirections!
-    let ref = Firebase(url: "https://sweltering-inferno-8277.firebaseio.com/")
+    //let ref = Firebase(url: "https://sweltering-inferno-8277.firebaseio.com/")
     let facebookLogin = FBSDKLoginManager()
     
     
@@ -62,6 +62,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return FBSDKApplicationDelegate.sharedInstance()
                 .application(application, openURL: url,
                     sourceApplication: sourceApplication, annotation: annotation)
+    }
+    
+    override init() {
+        super.init()
+       // Firebase.defaultConfig().persistenceEnabled = true
     }
     
    

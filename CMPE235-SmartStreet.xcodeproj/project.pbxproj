@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		1C24D630F67BBB5A332030E8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A003605DE87644433636721F /* Pods.framework */; };
 		A132DD3C1C88E06D0031A30D /* InviteFriendModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132DD3B1C88E06D0031A30D /* InviteFriendModalViewController.swift */; };
+		A13FC8DA1CA31A4600C9DEC7 /* FirebaseSimpleLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13FC8D91CA31A4600C9DEC7 /* FirebaseSimpleLogin.framework */; };
+		A13FC8DC1CA3410D00C9DEC7 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FC8DB1CA3410D00C9DEC7 /* UserSession.swift */; };
+		A13FC8E21CA8ADA400C9DEC7 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FC8E11CA8ADA400C9DEC7 /* CommentsViewController.swift */; };
+		A13FC8E41CA8C90A00C9DEC7 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FC8E31CA8C90900C9DEC7 /* CommentTableViewCell.swift */; };
+		A13FC8E61CA8D4A400C9DEC7 /* AddCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FC8E51CA8D4A400C9DEC7 /* AddCommentView.swift */; };
+		A1609B321C8D584700759CF7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1609B311C8D584700759CF7 /* SWRevealViewController.m */; };
+		A1609B341C8E531600759CF7 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1609B331C8E531600759CF7 /* SlideViewController.swift */; };
+		A1609B391C8EC5AD00759CF7 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1609B381C8EC5AD00759CF7 /* MediaViewController.swift */; };
+		A1609B3D1C8F5FB200759CF7 /* ShareModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1609B3C1C8F5FB200759CF7 /* ShareModalViewController.swift */; };
 		A19AC6C41C8635CC00BCABA0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6BE1C8635CC00BCABA0 /* Accelerate.framework */; };
 		A19AC6C51C8635CC00BCABA0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6BF1C8635CC00BCABA0 /* AVFoundation.framework */; };
 		A19AC6C61C8635CC00BCABA0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AC6C01C8635CC00BCABA0 /* CoreBluetooth.framework */; };
@@ -46,6 +55,7 @@
 		A19AC7751C86AF0300BCABA0 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7741C86AF0300BCABA0 /* Location.swift */; };
 		A19AC7791C86AF1600BCABA0 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7761C86AF1600BCABA0 /* Time.swift */; };
 		A19AC77B1C86AF1600BCABA0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7781C86AF1600BCABA0 /* Utils.swift */; };
+		A1AD05481C98D629006C95CA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AD05471C98D629006C95CA /* MobileCoreServices.framework */; };
 		A1BBFB6D1C8423C7004CE984 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A1BBFB6E1C8423C7004CE984 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A1BBFB711C842420004CE984 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -59,12 +69,17 @@
 		A1BBFC021C850275004CE984 /* LocationMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BBFC011C850275004CE984 /* LocationMarker.swift */; };
 		A1BBFC041C8535B8004CE984 /* MarkerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1BBFC031C8535B8004CE984 /* MarkerInfoView.xib */; };
 		A1BBFC081C85FCEB004CE984 /* DirectionTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BBFC071C85FCEB004CE984 /* DirectionTypeViewController.swift */; };
+		A1D402181CA9BA2300E4C9A8 /* RecordAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D402171CA9BA2300E4C9A8 /* RecordAudioViewController.swift */; };
+		A1D4021A1CA9E45A00E4C9A8 /* QRRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D402191CA9E45A00E4C9A8 /* QRRegisterViewController.swift */; };
 		A1D8EDA71C80228C002D0559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8EDA61C80228C002D0559 /* AppDelegate.swift */; };
 		A1D8EDAE1C80228C002D0559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D8EDAC1C80228C002D0559 /* Main.storyboard */; };
 		A1D8EDB31C80228C002D0559 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D8EDB11C80228C002D0559 /* LaunchScreen.storyboard */; };
 		A1D8EDBE1C80228C002D0559 /* CMPE235_SmartStreetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8EDBD1C80228C002D0559 /* CMPE235_SmartStreetTests.swift */; };
 		A1D8EDC91C80228C002D0559 /* CMPE235_SmartStreetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8EDC81C80228C002D0559 /* CMPE235_SmartStreetUITests.swift */; };
 		A1D8EDD71C8106A8002D0559 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D8EDD61C8106A8002D0559 /* Images.xcassets */; };
+		A1F298351C9D4548001CACD2 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F298341C9D4548001CACD2 /* Comment.swift */; };
+		A1F298371CA30DFD001CACD2 /* EmailSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F298361CA30DFC001CACD2 /* EmailSignInViewController.swift */; };
+		A1F298391CA314EC001CACD2 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F298381CA314EC001CACD2 /* Accounts.framework */; };
 		A1FC18EF1C83835B00D5A663 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FC18EE1C83835B00D5A663 /* MenuViewController.swift */; };
 		A1FC18F11C83837F00D5A663 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FC18F01C83837F00D5A663 /* AboutViewController.swift */; };
 		A1FC18F31C83865200D5A663 /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FC18F21C83865200D5A663 /* MenuTransitionManager.swift */; };
@@ -95,6 +110,17 @@
 		A003605DE87644433636721F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A132DD3B1C88E06D0031A30D /* InviteFriendModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFriendModalViewController.swift; sourceTree = "<group>"; };
 		A139FFCC1C8622D1006C5314 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Pods/PXGoogleDirections/Dependencies/GoogleMaps.framework; sourceTree = "<group>"; };
+		A13FC8D91CA31A4600C9DEC7 /* FirebaseSimpleLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseSimpleLogin.framework; sourceTree = "<group>"; };
+		A13FC8DB1CA3410D00C9DEC7 /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		A13FC8E11CA8ADA400C9DEC7 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentsViewController.swift; path = ../CommentsViewController.swift; sourceTree = "<group>"; };
+		A13FC8E31CA8C90900C9DEC7 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		A13FC8E51CA8D4A400C9DEC7 /* AddCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCommentView.swift; sourceTree = "<group>"; };
+		A1609B2F1C8D584700759CF7 /* CMPE235-SmartStreet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CMPE235-SmartStreet-Bridging-Header.h"; sourceTree = "<group>"; };
+		A1609B301C8D584700759CF7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		A1609B311C8D584700759CF7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		A1609B331C8E531600759CF7 /* SlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
+		A1609B381C8EC5AD00759CF7 /* MediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
+		A1609B3C1C8F5FB200759CF7 /* ShareModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareModalViewController.swift; sourceTree = "<group>"; };
 		A19AC6BE1C8635CC00BCABA0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		A19AC6BF1C8635CC00BCABA0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A19AC6C01C8635CC00BCABA0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -133,6 +159,7 @@
 		A19AC7741C86AF0300BCABA0 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		A19AC7761C86AF1600BCABA0 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		A19AC7781C86AF1600BCABA0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A1AD05471C98D629006C95CA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A1BBFBF11C84326E004CE984 /* NearbyLocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyLocationsViewController.swift; sourceTree = "<group>"; };
 		A1BBFBF31C843788004CE984 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
 		A1BBFBF51C8439DC004CE984 /* GoogleDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
@@ -142,6 +169,8 @@
 		A1BBFC011C850275004CE984 /* LocationMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMarker.swift; sourceTree = "<group>"; };
 		A1BBFC031C8535B8004CE984 /* MarkerInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerInfoView.xib; sourceTree = "<group>"; };
 		A1BBFC071C85FCEB004CE984 /* DirectionTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionTypeViewController.swift; sourceTree = "<group>"; };
+		A1D402171CA9BA2300E4C9A8 /* RecordAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordAudioViewController.swift; sourceTree = "<group>"; };
+		A1D402191CA9E45A00E4C9A8 /* QRRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRRegisterViewController.swift; sourceTree = "<group>"; };
 		A1D8EDA31C80228C002D0559 /* CMPE235-SmartStreet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CMPE235-SmartStreet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D8EDA61C80228C002D0559 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1D8EDAD1C80228C002D0559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -154,6 +183,9 @@
 		A1D8EDC81C80228C002D0559 /* CMPE235_SmartStreetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPE235_SmartStreetUITests.swift; sourceTree = "<group>"; };
 		A1D8EDCA1C80228C002D0559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1D8EDD61C8106A8002D0559 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A1F298341C9D4548001CACD2 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		A1F298361CA30DFC001CACD2 /* EmailSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailSignInViewController.swift; sourceTree = "<group>"; };
+		A1F298381CA314EC001CACD2 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A1FC18EE1C83835B00D5A663 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		A1FC18F01C83837F00D5A663 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A1FC18F21C83865200D5A663 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
@@ -166,6 +198,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F298391CA314EC001CACD2 /* Accounts.framework in Frameworks */,
+				A1AD05481C98D629006C95CA /* MobileCoreServices.framework in Frameworks */,
 				A19AC6DB1C86373E00BCABA0 /* libz.tbd in Frameworks */,
 				A19AC6D91C86372500BCABA0 /* libc++.tbd in Frameworks */,
 				A19AC6D71C8636F700BCABA0 /* libicucore.A.tbd in Frameworks */,
@@ -184,6 +218,7 @@
 				A19AC6C71C8635CC00BCABA0 /* CoreData.framework in Frameworks */,
 				A19AC6C81C8635CC00BCABA0 /* CoreText.framework in Frameworks */,
 				A19AC6C91C8635CC00BCABA0 /* GLKit.framework in Frameworks */,
+				A13FC8DA1CA31A4600C9DEC7 /* FirebaseSimpleLogin.framework in Frameworks */,
 				1C24D630F67BBB5A332030E8 /* Pods.framework in Frameworks */,
 				D369D35C4AD71A7AE8B02FC8 /* Pods_CMPE235_SmartStreet.framework in Frameworks */,
 			);
@@ -209,6 +244,8 @@
 		55FD4BF9EF8EB0E8A1CBB3C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A1F298381CA314EC001CACD2 /* Accounts.framework */,
+				A1AD05471C98D629006C95CA /* MobileCoreServices.framework */,
 				A19AC73E1C86876C00BCABA0 /* FBSDKCoreKit.framework */,
 				A19AC73F1C86876C00BCABA0 /* FBSDKLoginKit.framework */,
 				A19AC7401C86876C00BCABA0 /* FBSDKShareKit.framework */,
@@ -233,6 +270,33 @@
 				829A66DAA03589A768589018 /* Pods_CMPE235_SmartStreet.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1609B2D1C8D2F5400759CF7 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				A1609B381C8EC5AD00759CF7 /* MediaViewController.swift */,
+				A1D402171CA9BA2300E4C9A8 /* RecordAudioViewController.swift */,
+			);
+			name = Media;
+			sourceTree = "<group>";
+		};
+		A1609B2E1C8D3B6000759CF7 /* SlideOutMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A1609B301C8D584700759CF7 /* SWRevealViewController.h */,
+				A1609B311C8D584700759CF7 /* SWRevealViewController.m */,
+				A1609B331C8E531600759CF7 /* SlideViewController.swift */,
+			);
+			name = SlideOutMenu;
+			sourceTree = "<group>";
+		};
+		A1609B3B1C8F5F9700759CF7 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				A1609B3C1C8F5FB200759CF7 /* ShareModalViewController.swift */,
+			);
+			name = Share;
 			sourceTree = "<group>";
 		};
 		A19AC6EA1C86554100BCABA0 /* Directions */ = {
@@ -280,6 +344,7 @@
 		A1D8ED9A1C80228C002D0559 = {
 			isa = PBXGroup;
 			children = (
+				A13FC8D91CA31A4600C9DEC7 /* FirebaseSimpleLogin.framework */,
 				A1D8EDA51C80228C002D0559 /* CMPE235-SmartStreet */,
 				A1D8EDBC1C80228C002D0559 /* CMPE235-SmartStreetTests */,
 				A1D8EDC71C80228C002D0559 /* CMPE235-SmartStreetUITests */,
@@ -302,6 +367,12 @@
 		A1D8EDA51C80228C002D0559 /* CMPE235-SmartStreet */ = {
 			isa = PBXGroup;
 			children = (
+				A13FC8E11CA8ADA400C9DEC7 /* CommentsViewController.swift */,
+				A1F298331C9D4515001CACD2 /* Model */,
+				A1609B2F1C8D584700759CF7 /* CMPE235-SmartStreet-Bridging-Header.h */,
+				A1609B3B1C8F5F9700759CF7 /* Share */,
+				A1609B2E1C8D3B6000759CF7 /* SlideOutMenu */,
+				A1609B2D1C8D2F5400759CF7 /* Media */,
 				A1D8EDA61C80228C002D0559 /* AppDelegate.swift */,
 				A1D8EDAC1C80228C002D0559 /* Main.storyboard */,
 				A1D8EDB11C80228C002D0559 /* LaunchScreen.storyboard */,
@@ -314,6 +385,11 @@
 				A1BBFC001C84DE07004CE984 /* NearbyLocation */,
 				A19AC7541C86921B00BCABA0 /* LoginViewController.swift */,
 				A132DD3B1C88E06D0031A30D /* InviteFriendModalViewController.swift */,
+				A1F298361CA30DFC001CACD2 /* EmailSignInViewController.swift */,
+				A13FC8DB1CA3410D00C9DEC7 /* UserSession.swift */,
+				A13FC8E31CA8C90900C9DEC7 /* CommentTableViewCell.swift */,
+				A13FC8E51CA8D4A400C9DEC7 /* AddCommentView.swift */,
+				A1D402191CA9E45A00E4C9A8 /* QRRegisterViewController.swift */,
 			);
 			path = "CMPE235-SmartStreet";
 			sourceTree = "<group>";
@@ -334,6 +410,14 @@
 				A1D8EDCA1C80228C002D0559 /* Info.plist */,
 			);
 			path = "CMPE235-SmartStreetUITests";
+			sourceTree = "<group>";
+		};
+		A1F298331C9D4515001CACD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1F298341C9D4548001CACD2 /* Comment.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		D8528F76A634606173EE89FE /* Pods */ = {
@@ -533,36 +617,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				A19AC7791C86AF1600BCABA0 /* Time.swift in Sources */,
+				A1609B3D1C8F5FB200759CF7 /* ShareModalViewController.swift in Sources */,
 				A19AC76B1C86AEE900BCABA0 /* GoogleDirectionsRouteFare.swift in Sources */,
 				A19AC76C1C86AEE900BCABA0 /* GoogleDirectionsRouteLeg.swift in Sources */,
 				A1BBFBFA1C843ABD004CE984 /* MarkerInfoView.swift in Sources */,
 				A1BBFBF21C84326E004CE984 /* NearbyLocationsViewController.swift in Sources */,
 				A19AC76D1C86AEE900BCABA0 /* GoogleDirectionsRouteLegStep.swift in Sources */,
 				A19AC76A1C86AEE900BCABA0 /* GoogleDirectionsRoute.swift in Sources */,
+				A1609B391C8EC5AD00759CF7 /* MediaViewController.swift in Sources */,
 				A19AC76F1C86AEE900BCABA0 /* GoogleDirectionsStop.swift in Sources */,
 				A1BBFC021C850275004CE984 /* LocationMarker.swift in Sources */,
 				A1BBFBFC1C843B1A004CE984 /* UIViewExtension.swift in Sources */,
+				A1D4021A1CA9E45A00E4C9A8 /* QRRegisterViewController.swift in Sources */,
 				A1FC18F11C83837F00D5A663 /* AboutViewController.swift in Sources */,
+				A1609B321C8D584700759CF7 /* SWRevealViewController.m in Sources */,
 				A1FC18F31C83865200D5A663 /* MenuTransitionManager.swift in Sources */,
+				A1F298371CA30DFD001CACD2 /* EmailSignInViewController.swift in Sources */,
 				A19AC7651C86AEE900BCABA0 /* GoogleDirections.swift in Sources */,
 				A19AC7681C86AEE900BCABA0 /* GoogleDirectionsEnums.swift in Sources */,
+				A1D402181CA9BA2300E4C9A8 /* RecordAudioViewController.swift in Sources */,
 				A1D8EDA71C80228C002D0559 /* AppDelegate.swift in Sources */,
 				A19AC7731C86AEE900BCABA0 /* GoogleDirectionsTransitLineVehicle.swift in Sources */,
 				A19AC7691C86AEE900BCABA0 /* GoogleDirectionsResponse.swift in Sources */,
 				A19AC76E1C86AEE900BCABA0 /* GoogleDirectionsRouteLegStepTransitDetails.swift in Sources */,
 				A1FC18EF1C83835B00D5A663 /* MenuViewController.swift in Sources */,
 				A19AC7701C86AEE900BCABA0 /* GoogleDirectionsTime.swift in Sources */,
+				A13FC8E21CA8ADA400C9DEC7 /* CommentsViewController.swift in Sources */,
+				A13FC8E41CA8C90A00C9DEC7 /* CommentTableViewCell.swift in Sources */,
 				A19AC7551C86921B00BCABA0 /* LoginViewController.swift in Sources */,
 				A19AC7721C86AEE900BCABA0 /* GoogleDirectionsTransitLine.swift in Sources */,
+				A13FC8E61CA8D4A400C9DEC7 /* AddCommentView.swift in Sources */,
 				A1BBFBF61C8439DC004CE984 /* GoogleDataProvider.swift in Sources */,
 				A19AC7751C86AF0300BCABA0 /* Location.swift in Sources */,
 				A1BBFBF41C843788004CE984 /* TypesTableViewController.swift in Sources */,
+				A1609B341C8E531600759CF7 /* SlideViewController.swift in Sources */,
 				A19AC7711C86AEE900BCABA0 /* GoogleDirectionsTransitAgency.swift in Sources */,
+				A13FC8DC1CA3410D00C9DEC7 /* UserSession.swift in Sources */,
 				A1BBFC081C85FCEB004CE984 /* DirectionTypeViewController.swift in Sources */,
 				A132DD3C1C88E06D0031A30D /* InviteFriendModalViewController.swift in Sources */,
 				A1FC18F51C839F1900D5A663 /* SignUpViewController.swift in Sources */,
 				A19AC77B1C86AF1600BCABA0 /* Utils.swift in Sources */,
 				A19AC7671C86AEE900BCABA0 /* GoogleDirectionsDuration.swift in Sources */,
+				A1F298351C9D4548001CACD2 /* Comment.swift in Sources */,
 				A1BBFBF81C843A71004CE984 /* GooglePlace.swift in Sources */,
 				A19AC7661C86AEE900BCABA0 /* GoogleDirectionsDistance.swift in Sources */,
 			);
@@ -716,14 +812,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"\"${PROJECT_DIR}/FirebaseSimpleLogin.framework/Headers\"",
 				);
 				INFOPLIST_FILE = "CMPE235-SmartStreet/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SJSU.CMPE235-SmartStreet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CMPE235-SmartStreet/CMPE235-SmartStreet-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -734,14 +839,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"\"${PROJECT_DIR}/FirebaseSimpleLogin.framework/Headers\"",
 				);
 				INFOPLIST_FILE = "CMPE235-SmartStreet/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SJSU.CMPE235-SmartStreet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CMPE235-SmartStreet/CMPE235-SmartStreet-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -12,15 +12,31 @@ class InviteFriendModalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+        view.backgroundColor = UIColor.clearColor()
+        view.opaque = false
+        //let aSelector : Selector = "tapOnScreenDetected"
+        let tapGesture = UITapGestureRecognizer(target: self, action: "tapOnScreenDetected")
+        tapGesture.numberOfTapsRequired = 1
+        view.addGestureRecognizer(tapGesture)
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func tapOnScreenDetected() {
+        
+        
+        if let menuView = self.storyboard?.instantiateViewControllerWithIdentifier("SlideMenuConfig") as? SWRevealViewController {
+            
+            self.presentViewController(menuView, animated: true, completion: nil)
+        }
+    }
+    
+
     
     @IBAction func close(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
