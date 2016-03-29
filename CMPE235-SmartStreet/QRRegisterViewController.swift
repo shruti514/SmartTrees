@@ -36,6 +36,8 @@ class QRRegisterViewController: UIViewController, QRCodeReaderViewControllerDele
     @IBOutlet weak var button: UIButton!
     
     @IBOutlet weak var buttonLabel: UILabel!
+    
+    var dict:[String:String]!
     override func viewDidLoad() {
         super.viewDidLoad()
      
@@ -78,6 +80,7 @@ class QRRegisterViewController: UIViewController, QRCodeReaderViewControllerDele
                             let keyValue = part.componentsSeparatedByString("=")
                             dict[keyValue[0]]=keyValue[1]
                         }
+                        self.dict = dict
                         
                         if let signUpViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SignUpViewController") as? SignUpViewController {
                             
@@ -91,7 +94,7 @@ class QRRegisterViewController: UIViewController, QRCodeReaderViewControllerDele
                 }
             }
             
-           // presentViewController(reader, animated: true, completion: nil)
+           presentViewController(reader, animated: true, completion: nil)
         }
         else {
             let alert = UIAlertController(title: "Error", message: "Reader not supported by the current device", preferredStyle: .Alert)
@@ -156,7 +159,13 @@ class QRRegisterViewController: UIViewController, QRCodeReaderViewControllerDele
             )
             alert.addAction(UIAlertAction(title: "Done", style: .Cancel, handler: nil))
             
-            self?.presentViewController(alert, animated: true, completion: nil)
+            if let signUpViewController = self!.storyboard?.instantiateViewControllerWithIdentifier("SignUpViewController") as? SignUpViewController {
+                
+                signUpViewController.transferredUIImage = self!.imageView
+                signUpViewController.transferredName = self!.dict["name"]
+                signUpViewController.transferredEmailId = self!.dict["emailId"]
+                self!.presentViewController(signUpViewController, animated: true, completion: nil)
+            }
             })
     }
     

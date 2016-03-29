@@ -49,7 +49,7 @@ class SignUpViewController: UIViewController {
         
         }
         if(transferredUIImage != nil){
-            self.profilePic = transferredUIImage
+            self.profilePic.image = transferredUIImage.image
         }
         //self.profilePic.layer.cornerRadius = 10.0;
         // Do any additional setup after loading the view.
