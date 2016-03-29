@@ -41,20 +41,16 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCu-q0-Xiy">
                                 <rect key="frame" x="79" y="464" width="244" height="50"/>
-                                <state key="normal" backgroundImage="NewSignUpWIthEmail"/>
+                                <state key="normal" backgroundImage="Signin with email"/>
                                 <connections>
                                     <action selector="signIn:" destination="Zmg-zc-Rky" eventType="touchUpInside" id="lYq-99-ijR"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="0Wo-Fa-CDF">
-                                <rect key="frame" x="189" y="337" width="37" height="37"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="0Wo-Fa-CDF" id="VeS-ua-qsE"/>
                         <outlet property="emailId" destination="Uc7-GZ-Ft7" id="fKL-ap-Ki8"/>
                         <outlet property="password" destination="bnB-Oe-dIP" id="6fa-wz-7SP"/>
                     </connections>
@@ -734,29 +730,32 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="211.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjL-Xe-8hB">
-                                            <rect key="frame" x="172" y="-5" width="228" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjL-Xe-8hB">
+                                            <rect key="frame" x="176" y="16" width="235" height="13.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="235" id="nXw-OR-HOe"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" white="0.43422294463087246" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejd-xv-Ldu">
-                                            <rect key="frame" x="172" y="32" width="228" height="26"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejd-xv-Ldu">
+                                            <rect key="frame" x="176" y="49" width="235" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="235" id="ClI-kI-zaX"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjV-ap-Xmo">
-                                            <rect key="frame" x="8" y="136" width="58" height="26"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjV-ap-Xmo">
+                                            <rect key="frame" x="16" y="108" width="57.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vnU-0g-6bD">
-                                            <rect key="frame" x="8" y="-5" width="90" height="90"/>
-                                        </imageView>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ATL-X0-K9v" customClass="CosmosView" customModule="Cosmos">
-                                            <rect key="frame" x="8" y="160" width="136" height="27"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATL-X0-K9v" customClass="CosmosView" customModule="Cosmos">
+                                            <rect key="frame" x="16" y="136.5" width="120" height="20"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -764,14 +763,33 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jtx-vS-IGA">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jtx-vS-IGA">
                                             <rect key="frame" x="172" y="117" width="218" height="78"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="textColor" white="0.42242554530201343" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vnU-0g-6bD">
+                                            <rect key="frame" x="16" y="0.0" width="90" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="7DR-Yu-Ye6"/>
+                                                <constraint firstAttribute="height" constant="90" id="TaC-mi-DHm"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SjV-ap-Xmo" firstAttribute="top" secondItem="ISl-VE-RFX" secondAttribute="topMargin" constant="100" id="3Lt-ep-H0H"/>
+                                        <constraint firstItem="ATL-X0-K9v" firstAttribute="leading" secondItem="ISl-VE-RFX" secondAttribute="leadingMargin" constant="8" id="Ghy-Re-sfn"/>
+                                        <constraint firstItem="ejd-xv-Ldu" firstAttribute="top" secondItem="jjL-Xe-8hB" secondAttribute="bottom" constant="20" id="Urx-tD-zeU"/>
+                                        <constraint firstItem="jjL-Xe-8hB" firstAttribute="top" secondItem="ISl-VE-RFX" secondAttribute="topMargin" constant="8" id="bH0-o6-3g0"/>
+                                        <constraint firstItem="ejd-xv-Ldu" firstAttribute="leading" secondItem="vnU-0g-6bD" secondAttribute="trailing" constant="70" id="cbZ-jr-Ybe"/>
+                                        <constraint firstItem="jjL-Xe-8hB" firstAttribute="leading" secondItem="vnU-0g-6bD" secondAttribute="trailing" constant="70" id="dYe-XW-xCb"/>
+                                        <constraint firstItem="vnU-0g-6bD" firstAttribute="leading" secondItem="ISl-VE-RFX" secondAttribute="leadingMargin" constant="8" id="ggQ-P7-BVM"/>
+                                        <constraint firstItem="Jtx-vS-IGA" firstAttribute="top" secondItem="ejd-xv-Ldu" secondAttribute="bottom" constant="75.5" id="mHZ-Nc-HO3"/>
+                                        <constraint firstItem="ATL-X0-K9v" firstAttribute="top" secondItem="SjV-ap-Xmo" secondAttribute="bottom" constant="8" id="pu0-7U-aEY"/>
+                                        <constraint firstItem="SjV-ap-Xmo" firstAttribute="leading" secondItem="ISl-VE-RFX" secondAttribute="leadingMargin" constant="8" id="sCL-8n-sgR"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="commentDateLabel" destination="jjL-Xe-8hB" id="5Kw-Y3-Flf"/>
@@ -1250,6 +1268,7 @@
         <image name="NewSignUpWIthEmail" width="248" height="60"/>
         <image name="Rectangle 2" width="414" height="411"/>
         <image name="Rectangle 4" width="171" height="70"/>
+        <image name="Signin with email" width="207" height="54"/>
         <image name="add-user-3-512" width="205" height="190"/>
         <image name="arrow-105-512" width="512" height="512"/>
         <image name="default_marker.png" width="22" height="39"/>

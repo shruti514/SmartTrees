@@ -15,7 +15,7 @@ class SignUpViewController: UIViewController {
     
     
     @IBOutlet weak var profilePic: UIImageView!
-    var ref:Firebase!
+    var ref = Firebase(url: "https://sweltering-inferno-8277.firebaseio.com/")
     let profilesRef = Firebase(url: "https://sweltering-inferno-8277.firebaseio.com/profiles")
     
     //var authClient:FirebaseSimpleLogin!
@@ -39,7 +39,7 @@ class SignUpViewController: UIViewController {
         self.profilePic.clipsToBounds = true;
         self.profilePic.layer.borderWidth = 3.0
         self.profilePic.layer.borderColor = UIColor.whiteColor().CGColor
-        self.profilePic.contentMode = .ScaleAspectFit
+        //self.profilePic.contentMode = .ScaleAspectFit
         
         if(transferredName != nil){
             self.name.text = transferredName

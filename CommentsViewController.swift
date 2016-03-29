@@ -127,14 +127,15 @@ class CommentsViewController: UITableViewController {
         let decodedData = NSData(base64EncodedString: imageString, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
         
         let decodedImage = UIImage(data: decodedData!)
+        cell.profileImage!.image = decodedImage
         
-        cell.imageView!.layer.cornerRadius = cell.imageView!.frame.size.height / 2;
-        cell.imageView!.clipsToBounds = true;
-        cell.imageView!.layer.borderWidth = 3.0
-        cell.imageView!.layer.borderColor = UIColor.whiteColor().CGColor
-        cell.imageView!.contentMode = .ScaleAspectFit
+        cell.profileImage!.layer.cornerRadius = cell.profileImage!.frame.size.height / 2;
+        cell.profileImage!.clipsToBounds = true;
+        cell.profileImage!.layer.borderWidth = 3.0
+        cell.profileImage!.layer.borderColor = UIColor.whiteColor().CGColor
+        //cell.imageView!.contentMode = .ScaleAspectFit
         
-        cell.imageView!.image = decodedImage
+        
         
     }
     

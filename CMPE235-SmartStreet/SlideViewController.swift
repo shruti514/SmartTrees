@@ -34,7 +34,7 @@ class SlideViewController: UIViewController {
         self.profileImage.clipsToBounds = true;
         self.profileImage.layer.borderWidth = 3.0
         self.profileImage.layer.borderColor = UIColor.whiteColor().CGColor
-        self.profileImage.contentMode = .ScaleAspectFit
+        //self.profileImage.contentMode = .ScaleAspectFit
         
         if refUrl.authData != nil {
             // user authenticated
@@ -54,7 +54,7 @@ class SlideViewController: UIViewController {
         
         profilesRef.childByAppendingPath(refUrl.authData.uid).observeEventType(.Value, withBlock: { snapshot in
            
-            print(snapshot.value)
+            //print(snapshot.value)
           
             self.profileImage.image = self.showImage(snapshot.value["avatarUrl"] as! String)
             self.nameLabel.text = snapshot.value["name"] as? String

@@ -21,7 +21,7 @@ class RecordAudioViewController: UIViewController,AVAudioPlayerDelegate, AVAudio
     var soundRecorder : AVAudioRecorder!
     var SoundPlayer : AVAudioPlayer!
     
-    var fileName = "audioFile.mp3"
+    var fileName = "audioFile.caf"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,15 +35,21 @@ class RecordAudioViewController: UIViewController,AVAudioPlayerDelegate, AVAudio
     }
     
     func setupRecorder(){
+//        
+//        
+//        let recordSettings :[String:AnyObject] = [AVFormatIDKey : Int(kAudioFormatAppleLossless),
+//            AVEncoderAudioQualityKey : AVAudioQuality.Max.rawValue,
+//            AVEncoderBitRateKey : 320000,
+//        
+//            AVNumberOfChannelsKey : 2,
+//       
+//            AVSampleRateKey : 44100.0 ]
         
-        
-        let recordSettings :[String:AnyObject] = [AVFormatIDKey : Int(kAudioFormatAppleLossless),
-            AVEncoderAudioQualityKey : AVAudioQuality.Max.rawValue,
-            AVEncoderBitRateKey : 320000,
-        
-            AVNumberOfChannelsKey : 2,
-       
-            AVSampleRateKey : 44100.0 ]
+        let recordSettings :[String:AnyObject] =
+        [AVEncoderAudioQualityKey: AVAudioQuality.Min.rawValue,
+            AVEncoderBitRateKey: 16,
+            AVNumberOfChannelsKey: 2,
+            AVSampleRateKey: 44100.0]
         
         var error : NSError?
         
@@ -155,6 +161,11 @@ class RecordAudioViewController: UIViewController,AVAudioPlayerDelegate, AVAudio
             
             self.presentViewController(mailComposer, animated: true, completion: nil)
         }
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
     func saveToAssetLibrary(audioURL:NSURL) -> NSURL {

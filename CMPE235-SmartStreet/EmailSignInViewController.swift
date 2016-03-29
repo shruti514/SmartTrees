@@ -10,7 +10,7 @@ import Firebase
 
 class EmailSignInViewController: UIViewController {
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+ 
     
     let refUrl = Firebase(url: "https://sweltering-inferno-8277.firebaseio.com/")
     

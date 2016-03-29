@@ -68,7 +68,7 @@ class AddCommentView: UIViewController {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         profilesRef.childByAppendingPath(refUrl.authData.uid).observeEventType(.Value, withBlock: { snapshot in
             print(snapshot.value)
-            self.profileImage.contentMode = .ScaleAspectFit
+            //self.profileImage.contentMode = .ScaleAspectFit
             self.profileImage.layer.cornerRadius = self.profileImage.frame.size.height / 2;
             self.profileImage.clipsToBounds = true;
             self.profileImage.layer.borderWidth = 3.0
