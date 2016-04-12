@@ -126,7 +126,20 @@ class NearbyLocationsViewController: UIViewController ,UIPopoverPresentationCont
             }
         }
         mapView.animateWithCameraUpdate(GMSCameraUpdate.fitBounds(results[routeIndex].bounds!, withPadding: 150.0))
-        results[routeIndex].drawOnMap(mapView, strokeColor: UIColor.purpleColor(), strokeWidth: 4.0)
+        let mode = modeFromField()
+        if(mode == .Transit){
+            results[routeIndex].drawOnMap(mapView, strokeColor: UIColor.brownColor(), strokeWidth: 4.0)
+        }
+        if(mode == .Walking){
+            results[routeIndex].drawOnMap(mapView, strokeColor: UIColor.purpleColor(), strokeWidth: 4.0)
+        }
+        if(mode == .Driving){
+            results[routeIndex].drawOnMap(mapView, strokeColor: UIColor.orangeColor(), strokeWidth: 4.0)
+        }
+        if(mode == .Bicycling){
+            results[routeIndex].drawOnMap(mapView, strokeColor: UIColor.blueColor(), strokeWidth: 4.0)
+        }
+        
         results[routeIndex].drawOriginMarkerOnMap(mapView, title: "Origin", color: UIColor.greenColor(), opacity: 1.0, flat: true)
         results[routeIndex].drawDestinationMarkerOnMap(mapView, title: "Destination", color: UIColor.redColor(), opacity: 1.0, flat: true)
     }

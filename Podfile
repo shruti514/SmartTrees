@@ -15,7 +15,8 @@ pod 'MMDrawerController', '~> 0.5.7'
 pod 'SwiftyJSON', '~> 2.3.0'
 pod 'Alamofire', '~> 3.0'
 pod 'Cosmos', '~> 1.2'
-pod 'Parse-iOS-SDK'
+pod 'Parse', '~>1.8.4'
+pod 'ParseFacebookUtilsV4', '~>1.8.5'
 target 'CMPE235-SmartStreet' do
 end
 

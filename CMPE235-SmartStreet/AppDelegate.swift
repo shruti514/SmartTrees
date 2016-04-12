@@ -11,6 +11,7 @@ import GoogleMaps
 import Parse
 import FBSDKCoreKit
 import FBSDKLoginKit
+import ParseFacebookUtilsV4
 
 
 @UIApplicationMain
@@ -26,21 +27,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyBUf-BSDFWvv35UDrVyAXWWr7UzezPbxQw")
         directionsAPI = GoogleDirections(apiKey: "AIzaSyBob-IeBDk1h-1lPGC2Gw_u6pjEkRz59t8")
-        let myRootRef = Firebase(url:"https://sweltering-inferno-8277.firebaseio.com/")
-        // Write data to Firebase
-        myRootRef.setValue("Do you have data? You'll love Firebase.")
         
         Parse.enableLocalDatastore()
         
         // Initialize Parse.
-        Parse.setApplicationId("pQCx3CjwJTZgOfoWjrkdAGdKqAxBoXJoSVbltkeB", clientKey: "w6qn6WRv8ANXQP8alzpy6bUFMcDWOBk56xG8l4zy")
+        Parse.setApplicationId("pQCx3CjwJTZgOfoWjrkdAGdKqAxBoXJoSVbltkeB", clientKey:"w6qn6WRv8ANXQP8alzpy6bUFMcDWOBk56xG8l4zy")
         
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
-        return FBSDKApplicationDelegate.sharedInstance()
-            .application(application, didFinishLaunchingWithOptions: launchOptions)
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
+  
     
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -58,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        FBSDKAppEvents.activateApp()       
+        FBSDKAppEvents.activateApp()
 
     }
     

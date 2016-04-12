@@ -7,8 +7,6 @@ PODS:
     - Bolts/Tasks
   - Bolts/Tasks (1.6.0)
   - Cosmos (1.2.2)
-  - Facebook-iOS-SDK (3.24.4):
-    - Bolts (~> 1.2)
   - FBSDKCoreKit (4.10.0):
     - Bolts (~> 1.5)
   - FBSDKLoginKit (4.10.0):
@@ -30,9 +28,13 @@ PODS:
     - MMDrawerController/Core
   - MMDrawerController/Subclass (0.5.7):
     - MMDrawerController/Core
-  - Parse-iOS-SDK (1.2.21):
-    - Bolts
-    - Facebook-iOS-SDK (~> 3.7)
+  - Parse (1.8.5):
+    - Bolts/Tasks (>= 1.2.2)
+  - ParseFacebookUtilsV4 (1.8.5):
+    - Bolts/Tasks (>= 1.2.2)
+    - FBSDKCoreKit (~> 4.0)
+    - FBSDKLoginKit (~> 4.0)
+    - Parse (~> 1.8.4)
   - QRCodeReader.swift (5.3.1)
   - SwiftyJSON (2.3.2)
 
@@ -46,7 +48,8 @@ DEPENDENCIES:
   - Firebase (>= 2.5.0)
   - GoogleMaps
   - MMDrawerController (~> 0.5.7)
-  - Parse-iOS-SDK
+  - Parse (~> 1.8.4)
+  - ParseFacebookUtilsV4 (~> 1.8.5)
   - QRCodeReader.swift (~> 5.3.1)
   - SwiftyJSON (~> 2.3.0)
 
@@ -54,7 +57,6 @@ SPEC CHECKSUMS:
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
   Bolts: f52a250053bb517ca874523c3913776359ab3def
   Cosmos: 87c49100c69d2cb2eebfa4eb8d1e801fe29ff774
-  Facebook-iOS-SDK: 5a7c414a084708220b72d5fd016f2cf3eb6deda4
   FBSDKCoreKit: 13bec8373fb3af94d44daf2aa1e0958687897fbd
   FBSDKLoginKit: d3d4a2e9d31954deb00bfea964167a05ca1ea976
   FBSDKMessengerShareKit: 41c0b1a667d685c9433f993eb9611b3d5074e1cb
@@ -62,7 +64,8 @@ SPEC CHECKSUMS:
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
   GoogleMaps: a4ac67918d0b5ba5f6b9893ac80487e357779e6c
   MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
-  Parse-iOS-SDK: bd881681f8633d75f33fb6f3d5d52d19403c49cf
+  Parse: 17ad8e0677ed682f7f00503860fcda0f4eb74168
+  ParseFacebookUtilsV4: cc51857cf984c6fc743e7f17c2ddebdb6f02f963
   QRCodeReader.swift: 6aa05e4b9123f5bbbe1e7f1d5df28d590cc56775
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 

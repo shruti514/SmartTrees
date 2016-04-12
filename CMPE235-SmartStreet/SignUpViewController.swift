@@ -26,7 +26,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailAddress: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    @IBOutlet weak var confirmPassword: UITextField!
+    @IBOutlet weak var username: UITextField!
     
     var transferredName:String!
     var transferredEmailId:String!
@@ -62,53 +62,49 @@ class SignUpViewController: UIViewController {
         activityIndicator.hidden=false
         activityIndicator.startAnimating()
         
+        let name = self.name.text
+        let username = self.username.text
+        let password = self.password.text
+        let email = self.emailAddress.text
+        let finalEmail = email!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        var data: NSData = NSData()
+        if let image = self.profilePic.image {
+            data = UIImageJPEGRepresentation(image,0.1)!
+        }
         
         
+        let newUser = PFUser()
+       
+        newUser.setObject(name!, forKey: "name")
+        newUser.username = username
+        newUser.password = password
+        newUser.email = finalEmail
         
+        let profileFileObject = PFFile(data:data)
+        newUser.setObject(profileFileObject, forKey: "avatarUrl")
+     
         
-        ref.createUser(emailAddress.text, password: password.text,
-            withValueCompletionBlock: { error, result in
-                if error != nil {
-                    self.activityIndicator.stopAnimating()
-                    print("There was an error creating the account")
-                } else {
-                    let uid = result["uid"] as? String
-                    print("Successfully created user account with uid: \(uid)")
-
-                    self.ref.authUser(self.emailAddress.text, password: self.password.text,
-                        withCompletionBlock: { error, authData in
-                            if error != nil {
-                                print("There was an error logging in to this account")
-                                self.activityIndicator.stopAnimating()
-                                self.activityIndicator.hidden=true
-                            } else {
-                                print("We are now logged in")
-                                
-                                var data: NSData = NSData()
-                                if let image = self.profilePic.image {
-                                    data = UIImageJPEGRepresentation(image,0.1)!
-                                }
-                                let base64String = data.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
-                                
-                                let newUser = [
-                                    "emailId": self.emailAddress.text! as String,
-                                    "provider": authData.provider as String,
-                                    "name": self.name.text! as String,
-                                    "avatarUrl": base64String as String
-                                ]
-                                self.activityIndicator.stopAnimating()
-                                self.activityIndicator.hidden=true
-                                
-                                self.profilesRef.childByAppendingPath(authData.uid).setValue(newUser)
-                                if let menuView = self.storyboard?.instantiateViewControllerWithIdentifier("SlideMenuConfig") as? SWRevealViewController {
-                                    
-                                    
-                                    self.presentViewController(menuView, animated: true, completion: nil)
-                                }
-                                
-                            }
-                    })
-                }
+        // Sign up the user asynchronously
+        newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
+            
+            // Stop the spinner
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.hidden=true
+            if ((error) != nil) {
+                let alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                alert.show()
+                
+            } else {
+                let alert = UIAlertView(title: "Success", message: "Signed Up", delegate: self, cancelButtonTitle: "OK")
+                alert.show()
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    if let menuView = self.storyboard?.instantiateViewControllerWithIdentifier("SlideMenuConfig") as? SWRevealViewController {
+                        
+                        
+                        self.presentViewController(menuView, animated: true, completion: nil)
+                    }
+                })
+            }
         })
         
     }

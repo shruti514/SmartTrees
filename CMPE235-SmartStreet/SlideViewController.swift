@@ -24,9 +24,9 @@ class SlideViewController: UIViewController {
         }
         
     }
-    let refUrl = Firebase(url: "https://sweltering-inferno-8277.firebaseio.com/")
+    
     @IBOutlet weak var emailIdLabel: UILabel!
-    let profilesRef = Firebase(url: "https://sweltering-inferno-8277.firebaseio.com/profiles")
+   
     
     override func viewDidLoad() {
        
@@ -36,9 +36,10 @@ class SlideViewController: UIViewController {
         self.profileImage.layer.borderColor = UIColor.whiteColor().CGColor
         //self.profileImage.contentMode = .ScaleAspectFit
         
-        if refUrl.authData != nil {
+        if PFUser.currentUser() != nil {
             // user authenticated
-            loadDataFromFirebase()
+            //loadDataFromFirebase()
+            loadDataFromParse()
         } else {
             // No user is signed in
         }
@@ -47,23 +48,23 @@ class SlideViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func loadDataFromFirebase() {
+    func loadDataFromParse(){        
+        if let pUserName = PFUser.currentUser()?["username"] as? String {
+            self.nameLabel.text = "@" + pUserName
+        }
+        if let pEmailId = PFUser.currentUser()?["email"] as? String {
+            self.emailIdLabel.text =  pEmailId
+        }
         
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        let user = PFUser.currentUser()
+        let userImageFile = user!["avatarUrl"] as! PFFile
+        userImageFile.getDataInBackgroundWithBlock { (data, error) in
+            if error == nil{
+                self.profileImage.image = UIImage(data:data!)
+            }
+        }
         
-        
-        profilesRef.childByAppendingPath(refUrl.authData.uid).observeEventType(.Value, withBlock: { snapshot in
-           
-            //print(snapshot.value)
-          
-            self.profileImage.image = self.showImage(snapshot.value["avatarUrl"] as! String)
-            self.nameLabel.text = snapshot.value["name"] as? String
-            self.emailIdLabel.text = snapshot.value["emailId"] as? String
-            
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        })
     }
-    
     
     func showImage( imageString: String) -> UIImage{
         

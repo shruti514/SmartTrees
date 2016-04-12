@@ -9,9 +9,7 @@ import Firebase
 
 class CommentsViewController: UITableViewController {
     
-    let refUrl = Firebase(url: "https://sweltering-inferno-8277.firebaseio.com/")
-    let commentsRef = Firebase(url: "https://sweltering-inferno-8277.firebaseio.com/comments")
-    var items = [NSDictionary]()
+    var items = [PFObject]()
     
     @IBOutlet weak var segmentedView: UISegmentedControl!
     override func viewDidLoad() {
@@ -20,15 +18,15 @@ class CommentsViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        items = [NSDictionary]()
+        items = [PFObject]()
         
-        loadDataFromFirebase()
+        loadDataFromParse()
     }
     
     @IBAction func segmentedComponentValueChanged(sender: AnyObject) {
         let selectedSegmentIndex = segmentedView.selectedSegmentIndex
         if(selectedSegmentIndex == 0){
-            loadDataFromFirebase()
+            loadDataFromParse()
         }else if(selectedSegmentIndex == 1){
             showAddCommentView()
         }else if(selectedSegmentIndex == 2){
@@ -78,8 +76,12 @@ class CommentsViewController: UITableViewController {
         //populateTimeInterval(cell, timeInterval: dobTimeInterval)
         populateCommentDate(cell,commentDate:commentDate)
         
-        let base64String = dict["avatarUrl"] as! String
-        populateImage(cell, imageString: base64String)
+        let userImageFile = dict["avatarUrl"] as! PFFile
+        userImageFile.getDataInBackgroundWithBlock { (data, error) in
+            if error == nil{
+                self.populateImage(cell, imageData: data!)
+            }
+        }
         
         cell.commentText.text = dict["commentText"] as! String
         
@@ -122,11 +124,8 @@ class CommentsViewController: UITableViewController {
     
     // MARK:- Populate Image
     
-    func populateImage(cell:CommentTableViewCell, imageString: String) {
-        
-        let decodedData = NSData(base64EncodedString: imageString, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
-        
-        let decodedImage = UIImage(data: decodedData!)
+    func populateImage(cell:CommentTableViewCell, imageData: NSData) {
+        let decodedImage = UIImage(data: imageData)
         cell.profileImage!.image = decodedImage
         
         cell.profileImage!.layer.cornerRadius = cell.profileImage!.frame.size.height / 2;
@@ -150,33 +149,19 @@ class CommentsViewController: UITableViewController {
         cell.detailTextLabel?.backgroundColor = backgroundColor
     }
     
-    // MARK:- Load data from Firebase
-    
-    func loadDataFromFirebase() {
+    func loadDataFromParse(){
+        let query = PFQuery(className: "Comments")        
+        query.orderByDescending("commentDate")
+        query.limit = 10
         
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        
-//        commentsRef.queryOrderedByChild("commentDate").observeEventType(.ChildAdded, withBlock: { snapshot in
-//            if let commentDate = snapshot.value["commentDate"] as? String {
-//                print("\(snapshot.key) was \(commentDate) ")
-//            }
-//        })
-        
-        
-        commentsRef.observeEventType(.Value, withBlock: { snapshot in
-            var tempItems = [NSDictionary]()
-            
-            for item in snapshot.children {
-                let child = item as! FDataSnapshot
-                let dict = child.value as! NSDictionary
-                tempItems.append(dict)
+        query.findObjectsInBackgroundWithBlock {
+            (results: [PFObject]?, error: NSError?) -> Void in
+            if error == nil {
+                self.items = results!
+                self.tableView.reloadData()
             }
-            
-            self.items = tempItems
-            self.tableView.reloadData()
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-            
-        })
+        }
+    
     }
     
     

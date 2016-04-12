@@ -3,12 +3,9 @@
 //
 
 # import "SWRevealViewController.h"
-
 #import <FBSDKShareKit/FBSDKShareKit.h>
-#import <AWSCore/AWSCore.h>
-#import <AWSS3/AWSS3.h>
-#import <AWSDynamoDB/AWSDynamoDB.h>
-#import <AWSSQS/AWSSQS.h>
-#import <AWSSNS/AWSSNS.h>
-#import <AWSCognito/AWSCognito.h>
-#import <FirebaseSimpleLogin/FirebaseSimpleLogin.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <Parse/Parse.h>
+#import <Bolts/Bolts.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>

@@ -9,11 +9,9 @@ import Cosmos
 import Firebase
 class AddCommentView: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
-    let refUrl = Firebase(url: "https://sweltering-inferno-8277.firebaseio.com/")
-    let profilesRef = Firebase(url: "https://sweltering-inferno-8277.firebaseio.com/profiles")
-    let commentsRef = Firebase(url: "https://sweltering-inferno-8277.firebaseio.com/comments")
+   
 
-    var avatarUrl:String!
+    var avatarUrl:PFFile!
 
     @IBOutlet weak var postComment: UIButton!
     @IBOutlet weak var commentText: UITextView!
@@ -25,17 +23,26 @@ class AddCommentView: UIViewController {
     @IBAction func postCommentAction(sender: AnyObject) {
         let name = self.nameLabel.text
         let commentDate = self.dateLabel.text
-        let avatarUrl = self.avatarUrl
+        _ = self.avatarUrl
         let commentText = self.commentText.text
         let starRatings = self.cosmosViewPrecise.rating
         
         let starRatingsStr:String = String(format:"%.2f", starRatings)
-       
-       
-        let comment: NSDictionary = ["name": name!, "commentDate": commentDate!, "avatarUrl":avatarUrl, "commentText":commentText, "starRatings":starRatingsStr]
         
-        let thisCommentRef = commentsRef.childByAutoId()
-        thisCommentRef.setValue(comment)
+        let comment = PFObject(className:"Comments")
+        comment["username"] = name
+        comment["commentDate"] = commentDate
+        comment["commentText"] = commentText
+        comment["starRatings"] = starRatingsStr
+        comment["avatarUrl"] = self.avatarUrl
+        comment.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                print("Comment Saved to database")
+            } else {
+                print("There was an error saving a comment.")
+            }
+        }
         
         if let commentsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("CommentsViewController") as? CommentsViewController {
             
@@ -46,7 +53,7 @@ class AddCommentView: UIViewController {
   
     
     override func viewDidLoad(){
-        if refUrl.authData != nil {
+        if PFUser.currentUser() != nil {
             let dateformatter = NSDateFormatter()
             
             dateformatter.dateStyle = NSDateFormatterStyle.MediumStyle
@@ -57,34 +64,34 @@ class AddCommentView: UIViewController {
             
             self.dateLabel.text = now
             
-            loadDataFromFirebase()
+            loadDataFromParse()
         } else {
             // No user is signed in
         }
     }
     
-    func loadDataFromFirebase() {
+    func loadDataFromParse(){
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.size.height / 2;
+        self.profileImage.clipsToBounds = true;
+        self.profileImage.layer.borderWidth = 3.0
+        self.profileImage.layer.borderColor = UIColor.whiteColor().CGColor
         
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        profilesRef.childByAppendingPath(refUrl.authData.uid).observeEventType(.Value, withBlock: { snapshot in
-            print(snapshot.value)
-            //self.profileImage.contentMode = .ScaleAspectFit
-            self.profileImage.layer.cornerRadius = self.profileImage.frame.size.height / 2;
-            self.profileImage.clipsToBounds = true;
-            self.profileImage.layer.borderWidth = 3.0
-            self.profileImage.layer.borderColor = UIColor.whiteColor().CGColor
-            self.profileImage.image = self.showImage(snapshot.value["avatarUrl"] as! String)
-            self.avatarUrl = snapshot.value["avatarUrl"] as! String
-            self.nameLabel.text = snapshot.value["name"] as? String
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        })
+        if let pUserName = PFUser.currentUser()?["username"] as? String {
+            self.nameLabel.text = "@" + pUserName
+        }
+        
+        let user = PFUser.currentUser()
+        let userImageFile = user!["avatarUrl"] as! PFFile
+        userImageFile.getDataInBackgroundWithBlock { (data, error) in
+            if error == nil{
+                self.avatarUrl = userImageFile
+                self.profileImage.image = UIImage(data:data!)
+            }
+        }
+       
     }
     
-    func showImage( imageString: String) -> UIImage{
-        let decodedData = NSData(base64EncodedString: imageString, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
-        let decodedImage = UIImage(data: decodedData!)
-        return decodedImage!
-    }
+   
     
     func formatDate(date: NSDate) ->  String {
         let dateFormatter = NSDateFormatter()

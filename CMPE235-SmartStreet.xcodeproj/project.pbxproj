@@ -77,7 +77,6 @@
 		A1D8EDBE1C80228C002D0559 /* CMPE235_SmartStreetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8EDBD1C80228C002D0559 /* CMPE235_SmartStreetTests.swift */; };
 		A1D8EDC91C80228C002D0559 /* CMPE235_SmartStreetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8EDC81C80228C002D0559 /* CMPE235_SmartStreetUITests.swift */; };
 		A1D8EDD71C8106A8002D0559 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D8EDD61C8106A8002D0559 /* Images.xcassets */; };
-		A1F298351C9D4548001CACD2 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F298341C9D4548001CACD2 /* Comment.swift */; };
 		A1F298371CA30DFD001CACD2 /* EmailSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F298361CA30DFC001CACD2 /* EmailSignInViewController.swift */; };
 		A1F298391CA314EC001CACD2 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F298381CA314EC001CACD2 /* Accounts.framework */; };
 		A1FC18EF1C83835B00D5A663 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FC18EE1C83835B00D5A663 /* MenuViewController.swift */; };
@@ -183,7 +182,6 @@
 		A1D8EDC81C80228C002D0559 /* CMPE235_SmartStreetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPE235_SmartStreetUITests.swift; sourceTree = "<group>"; };
 		A1D8EDCA1C80228C002D0559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1D8EDD61C8106A8002D0559 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A1F298341C9D4548001CACD2 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		A1F298361CA30DFC001CACD2 /* EmailSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailSignInViewController.swift; sourceTree = "<group>"; };
 		A1F298381CA314EC001CACD2 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A1FC18EE1C83835B00D5A663 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -415,7 +413,6 @@
 		A1F298331C9D4515001CACD2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A1F298341C9D4548001CACD2 /* Comment.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -658,7 +655,6 @@
 				A1FC18F51C839F1900D5A663 /* SignUpViewController.swift in Sources */,
 				A19AC77B1C86AF1600BCABA0 /* Utils.swift in Sources */,
 				A19AC7671C86AEE900BCABA0 /* GoogleDirectionsDuration.swift in Sources */,
-				A1F298351C9D4548001CACD2 /* Comment.swift in Sources */,
 				A1BBFBF81C843A71004CE984 /* GooglePlace.swift in Sources */,
 				A19AC7661C86AEE900BCABA0 /* GoogleDirectionsDistance.swift in Sources */,
 			);
@@ -719,6 +715,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -768,6 +765,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -812,6 +810,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -839,6 +838,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

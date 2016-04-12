@@ -10,11 +10,13 @@
     import Parse
     import FBSDKShareKit
     import FBSDKLoginKit
+    import ParseFacebookUtilsV4
     
     class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
-        
-        let refUrl = Firebase(url: "https://sweltering-inferno-8277.firebaseio.com/")
+       
         let facebookLogin = FBSDKLoginManager()
+        let permissions=["public_profile", "email", "user_friends"]
+       // let permissions = ["public_profile"]
         //var authClient:FirebaseSimpleLogin!
         
         @IBOutlet weak var loginWithEmailButton: UIButton!
@@ -35,13 +37,7 @@
         override func viewDidLoad() {
             
             super.viewDidLoad()
-            
-            
-            
-            
-            
-            
-            if refUrl.authData != nil {
+            if PFUser.currentUser() != nil {
                 if (FBSDKAccessToken.currentAccessToken() != nil)
                 {
                     // User is already logged in, do work such as go to next view controller.
@@ -52,19 +48,11 @@
                     loginView.center = self.view.center
                     loginView.readPermissions = ["public_profile", "email", "user_friends"]
                     loginView.delegate = self
-                    
-                    //let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "11721569-f989-4602-953f-e0fb747c7977")
-                    //_ = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
+                  
                     
                     _ = FBSDKAccessToken.currentAccessToken().tokenString
                     //credentialsProvider.logins = [AWSCognitoLoginProviderKey.Facebook.rawValue: token]
                     self.returnUserData()
-                }else{
-//                    if let menuView = self.storyboard?.instantiateViewControllerWithIdentifier("SlideMenuConfig") as? SWRevealViewController {
-//                        
-//                        self.presentViewController(menuView, animated: true, completion: nil)
-//                    }
-                    
                 }
                 
             } else {
@@ -82,10 +70,6 @@
             
         }
         
-        
-        
-        
-        
         @IBAction func loginWithEmail(sender: AnyObject) {
             if let emailSignInViewController = self.storyboard?.instantiateViewControllerWithIdentifier("EmailSignInViewController") as? EmailSignInViewController {
                 
@@ -97,9 +81,6 @@
         
         @IBAction func register(sender: AnyObject) {
             if let signUpViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SignUpViewController") as? SignUpViewController {
-                signUpViewController.ref = self.refUrl
-                //signUpViewController.authClient = self.authClient
-                
                 self.presentViewController(signUpViewController, animated: true, completion: nil)
             }
         }
@@ -121,22 +102,137 @@
                 // should check if specific permissions missing
                 if result.grantedPermissions.contains("email")
                 {
-                    let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
-                    self.refUrl.authWithOAuthProvider("facebook", token: accessToken,
-                        withCompletionBlock: { error, authData in
-                            if error != nil {
-                                print("Login failed. \(error)")
-                            }
+                    PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile","email"], block: { (user:PFUser?, error:NSError?) -> Void in
+                        
+                        if(error != nil)
+                        {
+                            //Display an alert message
+                            let myAlert = UIAlertController(title:"Alert", message:error?.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert);
+                            
+                            let okAction =  UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+                            
+                            myAlert.addAction(okAction);
+                            self.presentViewController(myAlert, animated:true, completion:nil);
+                            
+                            return
+                        }
+                        
+                        print(user)
+                        
+                        _ = PFUser()
+                        
+//                        newUser["name"] = user[]
+//                        newUser.username = username
+//                        newUser.password = password
+//                        newUser.email = finalEmail
+//                        newUser["avatarUrl"] = base64String
+                        
+                        print("Current user token=\(FBSDKAccessToken.currentAccessToken().tokenString)")
+                        
+                        print("Current user id \(FBSDKAccessToken.currentAccessToken().userID)")
+                        
+                        if(FBSDKAccessToken.currentAccessToken() != nil)
+                        {
+                            self.saveUserInParse()
+                            self.returnUserData()
+                            
+                        }
                     })
+                }else{
+                    self.saveUserInParse()
+                    self.returnUserData()
                 }
                 
-                self.returnUserData()
             }
             
         }
         
         func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
             print("User Logged Out")
+        }
+        
+        func saveUserInParse(){
+            let requestParameters = ["fields": "id, email, first_name, last_name"]
+            
+            let userDetails = FBSDKGraphRequest(graphPath: "me", parameters: requestParameters)
+           
+            
+            userDetails.startWithCompletionHandler { (connection, result, error:NSError!) -> Void in
+                
+                if(error != nil)
+                {
+                    print("\(error.localizedDescription)")
+                    return
+                }
+                
+                if(result != nil)
+                {
+                    let fbResult = result as! Dictionary<String, AnyObject>
+                    let userId:String = fbResult["id"] as! String
+                    let userFirstName:String? = fbResult["first_name"] as? String
+                    let userLastName:String? = fbResult["last_name"] as? String
+                    let userEmail:String? = fbResult["email"] as? String
+                    
+                    
+                    print("\(userEmail)")
+                    
+                    let myUser = PFUser()
+                    
+                    var name=""
+                    
+                    // Save first name
+                    if(userFirstName != nil)
+                    {
+                       name = userFirstName!
+                    }
+                    
+                    //Save last name
+                    
+                    if(userLastName != nil)
+                    {
+                        myUser.setObject(name+userLastName!, forKey: "name")
+                    }
+                    
+                    // Save email address
+                    if(userEmail != nil)
+                    {
+                        myUser.setObject(userEmail!, forKey: "email")
+                        myUser.setObject(userEmail!, forKey: "username")
+                        myUser.setObject(userEmail!, forKey: "password")
+                    }
+                    
+                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+                        
+                        // Get Facebook profile picture
+                        let userProfile = "https://graph.facebook.com/" + userId + "/picture?type=large"
+                        
+                        let profilePictureUrl = NSURL(string: userProfile)
+                        
+                        let profilePictureData = NSData(contentsOfURL: profilePictureUrl!)
+                        
+                        if(profilePictureData != nil)
+                        {
+                            let profileFileObject = PFFile(data:profilePictureData!)
+                            myUser.setObject(profileFileObject, forKey: "avatarUrl")
+                        }
+                        
+                        
+                        myUser.signUpInBackgroundWithBlock({ (success:Bool, error:NSError?) -> Void in
+                            
+                            if(success)
+                            {
+                                print("User details are now updated")
+                            }
+                            
+                        })
+                        
+                    }
+                    
+                }
+                
+            }
+            
+
         }
         
         func returnUserData()
