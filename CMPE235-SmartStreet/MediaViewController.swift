@@ -10,7 +10,7 @@ import UIKit
 import MobileCoreServices
 import AVKit
 import AVFoundation
-import MediaPlayer
+//import MediaPlayer
 import AssetsLibrary
 import Photos
 

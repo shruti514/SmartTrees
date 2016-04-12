@@ -78,7 +78,9 @@ class ShareModalViewController: UIViewController,UIImagePickerControllerDelegate
     }
     
     
-    
+    /*!
+     Function used to share Photo on facebook
+    */
     func sharePhotoOnFacebook(){
         if(SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook))
         {
@@ -88,7 +90,6 @@ class ShareModalViewController: UIViewController,UIImagePickerControllerDelegate
             
             composeCtl.completionHandler = {
                 result -> Void in
-                
                 
                 let getResult = result as SLComposeViewControllerResult;
                 switch(getResult.rawValue) {

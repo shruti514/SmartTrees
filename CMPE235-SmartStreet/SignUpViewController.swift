@@ -61,6 +61,11 @@ class SignUpViewController: UIViewController {
     @IBAction func register(sender: AnyObject) {
         activityIndicator.hidden=false
         activityIndicator.startAnimating()
+        
+        
+        
+        
+        
         ref.createUser(emailAddress.text, password: password.text,
             withValueCompletionBlock: { error, result in
                 if error != nil {

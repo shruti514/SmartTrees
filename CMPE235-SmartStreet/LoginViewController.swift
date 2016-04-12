@@ -7,7 +7,7 @@
     //
     
     import UIKit
-    import Firebase
+    import Parse
     import FBSDKShareKit
     import FBSDKLoginKit
     
@@ -20,10 +20,26 @@
         @IBOutlet weak var loginWithEmailButton: UIButton!
         
         
+        override func viewWillAppear(animated: Bool) {
+            if (PFUser.currentUser() != nil) {
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    if let menuView = self.storyboard?.instantiateViewControllerWithIdentifier("SlideMenuConfig") as? SWRevealViewController {
+                        
+                        self.presentViewController(menuView, animated: true, completion: nil)
+                    }
+                })
+            }
+        }
+        
         
         override func viewDidLoad() {
             
             super.viewDidLoad()
+            
+            
+            
+            
+            
             
             if refUrl.authData != nil {
                 if (FBSDKAccessToken.currentAccessToken() != nil)

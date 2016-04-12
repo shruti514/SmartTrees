@@ -8,7 +8,7 @@
 
 import UIKit
 import GoogleMaps
-import Firebase
+import Parse
 import FBSDKCoreKit
 import FBSDKLoginKit
 
@@ -29,6 +29,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let myRootRef = Firebase(url:"https://sweltering-inferno-8277.firebaseio.com/")
         // Write data to Firebase
         myRootRef.setValue("Do you have data? You'll love Firebase.")
+        
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("pQCx3CjwJTZgOfoWjrkdAGdKqAxBoXJoSVbltkeB", clientKey: "w6qn6WRv8ANXQP8alzpy6bUFMcDWOBk56xG8l4zy")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
         return FBSDKApplicationDelegate.sharedInstance()
             .application(application, didFinishLaunchingWithOptions: launchOptions)
     }

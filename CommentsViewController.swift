@@ -132,11 +132,7 @@ class CommentsViewController: UITableViewController {
         cell.profileImage!.layer.cornerRadius = cell.profileImage!.frame.size.height / 2;
         cell.profileImage!.clipsToBounds = true;
         cell.profileImage!.layer.borderWidth = 3.0
-        cell.profileImage!.layer.borderColor = UIColor.whiteColor().CGColor
-        //cell.imageView!.contentMode = .ScaleAspectFit
-        
-        
-        
+        cell.profileImage!.layer.borderColor = UIColor.whiteColor().CGColor        
     }
     
     // MARK:- Apply TableViewCell Style
