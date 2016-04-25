@@ -997,7 +997,7 @@
                                     <action selector="handleDirectionModeChange:" destination="VWD-jE-1pJ" eventType="valueChanged" id="yPf-Jc-9wQ"/>
                                 </connections>
                             </segmentedControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="53f-3L-b1Y">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="53f-3L-b1Y">
                                 <rect key="frame" x="0.0" y="555" width="414" height="181"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO0-d2-hIl" customClass="GMSMapView">

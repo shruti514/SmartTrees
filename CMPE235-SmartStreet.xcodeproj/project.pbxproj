@@ -322,6 +322,13 @@
 			name = Directions;
 			sourceTree = "<group>";
 		};
+		A1AFC50E1CCE61A000208F9C /* InteractWithTrees */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = InteractWithTrees;
+			sourceTree = "<group>";
+		};
 		A1BBFC001C84DE07004CE984 /* NearbyLocation */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +372,7 @@
 		A1D8EDA51C80228C002D0559 /* CMPE235-SmartStreet */ = {
 			isa = PBXGroup;
 			children = (
+				A1AFC50E1CCE61A000208F9C /* InteractWithTrees */,
 				A13FC8E11CA8ADA400C9DEC7 /* CommentsViewController.swift */,
 				A1F298331C9D4515001CACD2 /* Model */,
 				A1609B2F1C8D584700759CF7 /* CMPE235-SmartStreet-Bridging-Header.h */,

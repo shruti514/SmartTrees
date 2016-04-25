@@ -87,6 +87,7 @@ class QRRegisterViewController: UIViewController, QRCodeReaderViewControllerDele
                             signUpViewController.transferredUIImage = self.imageView
                             signUpViewController.transferredName = dict["name"]
                             signUpViewController.transferredEmailId = dict["emailId"]
+                            signUpViewController.transferredUserName = dict["username"]
                             self.presentViewController(signUpViewController, animated: true, completion: nil)
                         }
                     }

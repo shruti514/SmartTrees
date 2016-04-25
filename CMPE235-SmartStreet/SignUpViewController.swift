@@ -30,6 +30,7 @@ class SignUpViewController: UIViewController {
     
     var transferredName:String!
     var transferredEmailId:String!
+    var transferredUserName:String!
     var transferredUIImage: UIImageView!
 
     override func viewDidLoad() {
@@ -50,6 +51,9 @@ class SignUpViewController: UIViewController {
         }
         if(transferredUIImage != nil){
             self.profilePic.image = transferredUIImage.image
+        }
+        if(transferredUserName != nil){
+            self.username.text = transferredUserName
         }
         //self.profilePic.layer.cornerRadius = 10.0;
         // Do any additional setup after loading the view.
