@@ -53,7 +53,7 @@ class SlideViewController: UIViewController {
             self.nameLabel.text = "@" + pUserName
         }
         if let pEmailId = PFUser.currentUser()?["email"] as? String {
-            self.emailIdLabel.text =  pEmailId
+            //self.emailIdLabel.text =  pEmailId
         }
         
         let user = PFUser.currentUser()
