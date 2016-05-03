@@ -45,7 +45,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEs-qi-AV3">
                                 <rect key="frame" x="161" y="225" width="93" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" red="0.99215686274509807" green="0.55686274509803924" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.2666666667" green="0.36078431370000003" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="bnB-Oe-dIP">
@@ -62,14 +62,11 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCu-q0-Xiy">
                                 <rect key="frame" x="79" y="464" width="244" height="50"/>
-                                <state key="normal" backgroundImage="Signin with email"/>
+                                <state key="normal" backgroundImage="GreenSignInEmailButton"/>
                                 <connections>
                                     <action selector="signIn:" destination="Zmg-zc-Rky" eventType="touchUpInside" id="lYq-99-ijR"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="darkBackground" translatesAutoresizingMaskIntoConstraints="NO" id="BKC-4c-ScX">
-                                <rect key="frame" x="20" y="196" width="374" height="432"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -95,16 +92,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HomeScreen attemp2" translatesAutoresizingMaskIntoConstraints="NO" id="LeL-NB-hwH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient-1" translatesAutoresizingMaskIntoConstraints="NO" id="LeL-NB-hwH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smart Streets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbG-jI-ZzJ">
-                                <rect key="frame" x="147" y="12" width="134" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="0.95294117647058818" green="0.60784313725490191" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfH-VH-37c">
                                 <rect key="frame" x="150" y="597" width="114" height="30"/>
                                 <state key="normal" title="Login With Email"/>
@@ -119,6 +110,12 @@
                                     <action selector="register:" destination="709-v5-y5W" eventType="touchUpInside" id="qnw-Q9-bSR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smart Streets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbG-jI-ZzJ">
+                                <rect key="frame" x="140" y="42" width="172" height="73"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
@@ -267,7 +264,7 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="EkR-sm-Ai0">
                                 <rect key="frame" x="20" y="54" width="374" height="551"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="darkBackground" translatesAutoresizingMaskIntoConstraints="NO" id="hC2-g6-PMs">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="latestBluebackground" translatesAutoresizingMaskIntoConstraints="NO" id="hC2-g6-PMs">
                                 <rect key="frame" x="21" y="54" width="374" height="551"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="9Gy-dn-dDe">
@@ -296,18 +293,18 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GH-t2-6JW">
                                 <rect key="frame" x="76" y="533" width="244" height="50"/>
-                                <state key="normal" backgroundImage="NewSignUpWIthEmail"/>
+                                <state key="normal" backgroundImage="GreenSignUpEmail"/>
                                 <connections>
                                     <action selector="register:" destination="ntc-2V-MgQ" eventType="touchUpInside" id="UCb-dG-f9W"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow-105-512" translatesAutoresizingMaskIntoConstraints="NO" id="O3o-RZ-Q4E">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blue_Back_Arrow.svg" translatesAutoresizingMaskIntoConstraints="NO" id="O3o-RZ-Q4E">
                                 <rect key="frame" x="171" y="613" width="72" height="72"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="if8-Ql-6On">
                                 <rect key="frame" x="161" y="71" width="93" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" red="0.98823529409999999" green="0.57254901960000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.69019607843137254" green="0.81176470588235294" blue="0.14509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.97647058819999999" green="0.43529411759999997" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSz-Aw-cwk">
@@ -320,7 +317,7 @@
                                 <rect key="frame" x="100" y="20" width="215" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Quick SignUp with QR code?">
-                                    <color key="titleColor" red="0.9882352941176471" green="0.6705882352941176" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.63137254901960782" green="0.78431372549019607" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="Vc3-AQ-XRf" kind="presentation" id="cNB-Ee-RI4"/>
@@ -328,7 +325,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-Tq-cQ6">
                                 <rect key="frame" x="180" y="411" width="72" height="30"/>
-                                <state key="normal" title="Add Photo"/>
+                                <state key="normal" title="Add Photo">
+                                    <color key="titleColor" red="0.69019607839999997" green="0.81176470590000005" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="addPicture:" destination="ntc-2V-MgQ" eventType="touchUpInside" id="gk1-gD-dex"/>
                                 </connections>
@@ -583,7 +582,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="finalTabbar" translatesAutoresizingMaskIntoConstraints="NO" id="NfT-y7-HlB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="finalTabbar-1" translatesAutoresizingMaskIntoConstraints="NO" id="NfT-y7-HlB">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dyJ-OR-bZj">
@@ -602,13 +601,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCI-PT-Dh1">
                                 <rect key="frame" x="41" y="184" width="75" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utc-AJ-3O7">
                                 <rect key="frame" x="41" y="251" width="75" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KC9-Ag-8Ay">
@@ -652,7 +651,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHF-bP-4Eu">
                                 <rect key="frame" x="152" y="93" width="218" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -882,7 +881,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient-stretch" translatesAutoresizingMaskIntoConstraints="NO" id="ffd-Nv-ohu">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="latestBluegradientbackground" translatesAutoresizingMaskIntoConstraints="NO" id="ffd-Nv-ohu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRa-HW-h9a">
@@ -920,10 +919,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="slackbackground" translatesAutoresizingMaskIntoConstraints="NO" id="MzA-pp-fM4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WhiteBAckground" translatesAutoresizingMaskIntoConstraints="NO" id="MzA-pp-fM4">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Green 2 tab baar" translatesAutoresizingMaskIntoConstraints="NO" id="Npm-fy-TxU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="finalTabbar-1" translatesAutoresizingMaskIntoConstraints="NO" id="Npm-fy-TxU">
                                 <rect key="frame" x="0.0" y="0.0" width="415" height="75"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEK-EM-jIf">
@@ -1028,7 +1027,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WhiteBAckground" translatesAutoresizingMaskIntoConstraints="NO" id="1wn-JJ-Epi">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="tealTab bar" translatesAutoresizingMaskIntoConstraints="NO" id="BJj-8n-oXW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="finalTabbar-1" translatesAutoresizingMaskIntoConstraints="NO" id="BJj-8n-oXW">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="HDG-bv-upN"/>
@@ -1102,7 +1101,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ija-Kb-ytX">
                                             <rect key="frame" x="8" y="8" width="225" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNB-gc-INv">
@@ -1137,7 +1136,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="YellowTab bar" translatesAutoresizingMaskIntoConstraints="NO" id="cBl-Yf-Ufs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="finalTabbar-1" translatesAutoresizingMaskIntoConstraints="NO" id="cBl-Yf-Ufs">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhU-CG-313">
@@ -1190,7 +1189,7 @@
                                     <constraint firstAttribute="height" constant="71" id="WRd-kh-hah"/>
                                     <constraint firstAttribute="width" constant="71" id="ZCE-yx-FAD"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Orange back arrowBack_Arrow.svg"/>
+                                <state key="normal" backgroundImage="Blue back arrowBack_Arrow.svg"/>
                                 <connections>
                                     <action selector="renderHome:" destination="VWD-jE-1pJ" eventType="touchUpInside" id="NIP-PZ-I0b"/>
                                     <segue destination="2j7-Wo-jBS" kind="unwind" unwindAction="unwindToMenuViewController:" id="bdK-sp-F0s"/>
@@ -1280,7 +1279,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WhiteBAckground" translatesAutoresizingMaskIntoConstraints="NO" id="99d-qA-MMn">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="tealTab bar" translatesAutoresizingMaskIntoConstraints="NO" id="9Hp-fS-bRi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="finalTabbar-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Hp-fS-bRi">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="prU-sc-Dgk"/>
@@ -1364,7 +1363,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mk0-og-Unt">
                                 <rect key="frame" x="94" y="224" width="234" height="63"/>
-                                <state key="normal" backgroundImage="Rectangle 4"/>
+                                <state key="normal" backgroundImage="finalTabbar"/>
                                 <connections>
                                     <action selector="scanAction:" destination="Vc3-AQ-XRf" eventType="touchUpInside" id="IQp-Ae-XFS"/>
                                 </connections>
@@ -1432,7 +1431,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient-stretch" translatesAutoresizingMaskIntoConstraints="NO" id="fne-Vg-SVC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="latestBluegradientbackground" translatesAutoresizingMaskIntoConstraints="NO" id="fne-Vg-SVC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -1502,45 +1501,38 @@
         <image name="AboutTrees" width="130" height="130"/>
         <image name="Audio" width="122" height="50"/>
         <image name="Background2" width="414" height="736"/>
+        <image name="Blue back arrowBack_Arrow.svg" width="105" height="105"/>
         <image name="Blue_Back_Arrow.svg" width="78" height="78"/>
         <image name="Comment-1" width="390" height="390"/>
-        <image name="Green 2 tab baar" width="415" height="60"/>
-        <image name="HomeScreen attemp2" width="414" height="736"/>
+        <image name="GreenSignInEmailButton" width="720" height="132"/>
+        <image name="GreenSignUpEmail" width="720" height="132"/>
         <image name="Horizontal Line Separator " width="363" height="2"/>
         <image name="InteractWithTrees-1" width="130" height="130"/>
         <image name="Location" width="390" height="390"/>
-        <image name="NewSignUpWIthEmail" width="248" height="60"/>
-        <image name="Orange back arrowBack_Arrow.svg" width="105" height="105"/>
         <image name="Photo-1" width="122" height="50"/>
         <image name="PhotoVideo" width="390" height="390"/>
         <image name="Rectangle 2" width="414" height="411"/>
-        <image name="Rectangle 4" width="171" height="70"/>
         <image name="ScanQRCode" width="366" height="150"/>
         <image name="Share-1" width="390" height="390"/>
-        <image name="Signin with email" width="207" height="54"/>
         <image name="SubmitButton" width="366" height="150"/>
         <image name="Video" width="122" height="50"/>
         <image name="WhiteBAckground" width="414" height="736"/>
-        <image name="YellowTab bar" width="415" height="60"/>
         <image name="add-user-White" width="72" height="67"/>
-        <image name="arrow-105-512" width="512" height="512"/>
         <image name="color ref" width="283" height="736"/>
-        <image name="darkBackground" width="414" height="736"/>
         <image name="default_marker.png" width="22" height="39"/>
         <image name="edit profile" width="340" height="340"/>
         <image name="facebook icon" width="120" height="120"/>
         <image name="finalTabbar" width="415" height="65"/>
         <image name="finalTabbar-1" width="414" height="65"/>
-        <image name="gradient-stretch" width="375" height="557"/>
+        <image name="gradient-1" width="414" height="736"/>
         <image name="home-var-outline" width="256" height="227"/>
         <image name="icon-menu" width="24" height="15"/>
         <image name="latestBluebackground" width="414" height="736"/>
+        <image name="latestBluegradientbackground" width="414" height="736"/>
         <image name="people" width="320" height="220"/>
         <image name="qrcode.for website" width="200" height="200"/>
         <image name="sharebymail" width="118" height="118"/>
         <image name="signout2" width="200" height="222"/>
-        <image name="slackbackground" width="414" height="736"/>
         <image name="social" width="512" height="512"/>
-        <image name="tealTab bar" width="415" height="60"/>
     </resources>
 </document>

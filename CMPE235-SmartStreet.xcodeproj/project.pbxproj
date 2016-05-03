@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C24D630F67BBB5A332030E8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A003605DE87644433636721F /* Pods.framework */; };
+		2BE2CD1ABC61A46CEA3C1DB7 /* Pods_CMPE235_SmartStreetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60A12C58F6BD8E0134D4AD3 /* Pods_CMPE235_SmartStreetUITests.framework */; };
 		A132DD3C1C88E06D0031A30D /* InviteFriendModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132DD3B1C88E06D0031A30D /* InviteFriendModalViewController.swift */; };
 		A13FC8DA1CA31A4600C9DEC7 /* FirebaseSimpleLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13FC8D91CA31A4600C9DEC7 /* FirebaseSimpleLogin.framework */; };
 		A13FC8DC1CA3410D00C9DEC7 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FC8DB1CA3410D00C9DEC7 /* UserSession.swift */; };
@@ -86,6 +87,7 @@
 		A1FC18F11C83837F00D5A663 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FC18F01C83837F00D5A663 /* AboutViewController.swift */; };
 		A1FC18F31C83865200D5A663 /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FC18F21C83865200D5A663 /* MenuTransitionManager.swift */; };
 		A1FC18F51C839F1900D5A663 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FC18F41C839F1900D5A663 /* SignUpViewController.swift */; };
+		B4C5B74757CB6D284B00D011 /* Pods_CMPE235_SmartStreetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C011180800D811C09357EC /* Pods_CMPE235_SmartStreetTests.framework */; };
 		D369D35C4AD71A7AE8B02FC8 /* Pods_CMPE235_SmartStreet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829A66DAA03589A768589018 /* Pods_CMPE235_SmartStreet.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,7 +109,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76B8BCBDB53A86FE913F5E55 /* Pods-CMPE235-SmartStreet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMPE235-SmartStreet.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMPE235-SmartStreet/Pods-CMPE235-SmartStreet.release.xcconfig"; sourceTree = "<group>"; };
 		829A66DAA03589A768589018 /* Pods_CMPE235_SmartStreet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMPE235_SmartStreet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9213D022CAD685ADCD8174F1 /* Pods-CMPE235-SmartStreet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMPE235-SmartStreet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CMPE235-SmartStreet/Pods-CMPE235-SmartStreet.debug.xcconfig"; sourceTree = "<group>"; };
 		97E8B0679EABB9A2B58FD760 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A003605DE87644433636721F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A132DD3B1C88E06D0031A30D /* InviteFriendModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFriendModalViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +198,12 @@
 		A1FC18F01C83837F00D5A663 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A1FC18F21C83865200D5A663 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 		A1FC18F41C839F1900D5A663 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A3C011180800D811C09357EC /* Pods_CMPE235_SmartStreetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMPE235_SmartStreetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B808CE324A366C66B786ADB8 /* Pods-CMPE235-SmartStreetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMPE235-SmartStreetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CMPE235-SmartStreetTests/Pods-CMPE235-SmartStreetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2A771ED50642410EF280D4B /* Pods-CMPE235-SmartStreetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMPE235-SmartStreetUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMPE235-SmartStreetUITests/Pods-CMPE235-SmartStreetUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D60A12C58F6BD8E0134D4AD3 /* Pods_CMPE235_SmartStreetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMPE235_SmartStreetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D64563443012A28D90B02B70 /* Pods-CMPE235-SmartStreetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMPE235-SmartStreetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMPE235-SmartStreetTests/Pods-CMPE235-SmartStreetTests.release.xcconfig"; sourceTree = "<group>"; };
+		F63E93E71C3990C0A1DC73BD /* Pods-CMPE235-SmartStreetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMPE235-SmartStreetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CMPE235-SmartStreetUITests/Pods-CMPE235-SmartStreetUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FFB971D5EA9D7D0F061F14B0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +242,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4C5B74757CB6D284B00D011 /* Pods_CMPE235_SmartStreetTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +250,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE2CD1ABC61A46CEA3C1DB7 /* Pods_CMPE235_SmartStreetUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +284,8 @@
 				A19AC6C31C8635CC00BCABA0 /* GLKit.framework */,
 				A003605DE87644433636721F /* Pods.framework */,
 				829A66DAA03589A768589018 /* Pods_CMPE235_SmartStreet.framework */,
+				A3C011180800D811C09357EC /* Pods_CMPE235_SmartStreetTests.framework */,
+				D60A12C58F6BD8E0134D4AD3 /* Pods_CMPE235_SmartStreetUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -439,6 +453,12 @@
 			children = (
 				FFB971D5EA9D7D0F061F14B0 /* Pods.debug.xcconfig */,
 				97E8B0679EABB9A2B58FD760 /* Pods.release.xcconfig */,
+				9213D022CAD685ADCD8174F1 /* Pods-CMPE235-SmartStreet.debug.xcconfig */,
+				76B8BCBDB53A86FE913F5E55 /* Pods-CMPE235-SmartStreet.release.xcconfig */,
+				B808CE324A366C66B786ADB8 /* Pods-CMPE235-SmartStreetTests.debug.xcconfig */,
+				D64563443012A28D90B02B70 /* Pods-CMPE235-SmartStreetTests.release.xcconfig */,
+				F63E93E71C3990C0A1DC73BD /* Pods-CMPE235-SmartStreetUITests.debug.xcconfig */,
+				D2A771ED50642410EF280D4B /* Pods-CMPE235-SmartStreetUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -450,12 +470,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1D8EDCD1C80228C002D0559 /* Build configuration list for PBXNativeTarget "CMPE235-SmartStreet" */;
 			buildPhases = (
-				72124E2962334047BB3D8B0F /* Check Pods Manifest.lock */,
+				72124E2962334047BB3D8B0F /* 📦 Check Pods Manifest.lock */,
 				A1D8ED9F1C80228C002D0559 /* Sources */,
 				A1D8EDA01C80228C002D0559 /* Frameworks */,
 				A1D8EDA11C80228C002D0559 /* Resources */,
-				6567A05271FCE4B9ECFAF75D /* Embed Pods Frameworks */,
-				4C2365250BFB3CF40671B406 /* Copy Pods Resources */,
+				6567A05271FCE4B9ECFAF75D /* 📦 Embed Pods Frameworks */,
+				4C2365250BFB3CF40671B406 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -470,9 +490,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1D8EDD01C80228C002D0559 /* Build configuration list for PBXNativeTarget "CMPE235-SmartStreetTests" */;
 			buildPhases = (
+				6A5F30BF66A2AE98C7A67352 /* 📦 Check Pods Manifest.lock */,
 				A1D8EDB51C80228C002D0559 /* Sources */,
 				A1D8EDB61C80228C002D0559 /* Frameworks */,
 				A1D8EDB71C80228C002D0559 /* Resources */,
+				FD4240B777C615B1D484AFB1 /* 📦 Embed Pods Frameworks */,
+				C1DD6103B94805448AC7D1F2 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -488,9 +511,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1D8EDD31C80228C002D0559 /* Build configuration list for PBXNativeTarget "CMPE235-SmartStreetUITests" */;
 			buildPhases = (
+				83FDDD7EA028223D709AA286 /* 📦 Check Pods Manifest.lock */,
 				A1D8EDC01C80228C002D0559 /* Sources */,
 				A1D8EDC11C80228C002D0559 /* Frameworks */,
 				A1D8EDC21C80228C002D0559 /* Resources */,
+				974115223058DFB81C5418BE /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -578,29 +603,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4C2365250BFB3CF40671B406 /* Copy Pods Resources */ = {
+		4C2365250BFB3CF40671B406 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CMPE235-SmartStreet/Pods-CMPE235-SmartStreet-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6567A05271FCE4B9ECFAF75D /* Embed Pods Frameworks */ = {
+		6567A05271FCE4B9ECFAF75D /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,19 +633,94 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CMPE235-SmartStreet/Pods-CMPE235-SmartStreet-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		72124E2962334047BB3D8B0F /* Check Pods Manifest.lock */ = {
+		6A5F30BF66A2AE98C7A67352 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		72124E2962334047BB3D8B0F /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		83FDDD7EA028223D709AA286 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		974115223058DFB81C5418BE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CMPE235-SmartStreetUITests/Pods-CMPE235-SmartStreetUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1DD6103B94805448AC7D1F2 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CMPE235-SmartStreetTests/Pods-CMPE235-SmartStreetTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD4240B777C615B1D484AFB1 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CMPE235-SmartStreetTests/Pods-CMPE235-SmartStreetTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -826,7 +926,7 @@
 		};
 		A1D8EDCE1C80228C002D0559 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFB971D5EA9D7D0F061F14B0 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 9213D022CAD685ADCD8174F1 /* Pods-CMPE235-SmartStreet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -854,7 +954,7 @@
 		};
 		A1D8EDCF1C80228C002D0559 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97E8B0679EABB9A2B58FD760 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 76B8BCBDB53A86FE913F5E55 /* Pods-CMPE235-SmartStreet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -881,6 +981,7 @@
 		};
 		A1D8EDD11C80228C002D0559 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B808CE324A366C66B786ADB8 /* Pods-CMPE235-SmartStreetTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				ENABLE_BITCODE = NO;
@@ -894,6 +995,7 @@
 		};
 		A1D8EDD21C80228C002D0559 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D64563443012A28D90B02B70 /* Pods-CMPE235-SmartStreetTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				ENABLE_BITCODE = NO;
@@ -907,6 +1009,7 @@
 		};
 		A1D8EDD41C80228C002D0559 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F63E93E71C3990C0A1DC73BD /* Pods-CMPE235-SmartStreetUITests.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "CMPE235-SmartStreetUITests/Info.plist";
@@ -920,6 +1023,7 @@
 		};
 		A1D8EDD51C80228C002D0559 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2A771ED50642410EF280D4B /* Pods-CMPE235-SmartStreetUITests.release.xcconfig */;
 			buildSettings = {
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "CMPE235-SmartStreetUITests/Info.plist";
