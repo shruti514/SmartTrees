@@ -72,7 +72,13 @@ class MenuViewController: UIViewController {
         self.revealViewController().pushFrontViewController(mediaController, animated: true)
         
     }
-
+    
+    @IBAction func openInteractWithTreesScreen(sender: AnyObject) {
+        let interactController = storyboard?.instantiateViewControllerWithIdentifier("InteractWithTreesViewController") as! InteractWithTreesViewController
+        
+        self.revealViewController().pushFrontViewController(interactController, animated: true)
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -98,7 +104,12 @@ class MenuViewController: UIViewController {
         //let modalViewController = ShareModalViewController()
         let commentsViewController = storyboard?.instantiateViewControllerWithIdentifier("CommentsViewController") as! CommentsViewController
         commentsViewController.modalPresentationStyle = .OverCurrentContext
-        self.presentViewController(commentsViewController, animated: true, completion: nil)
+       // self.presentViewController(commentsViewController, animated: true, completion: nil)
+        
+       
+        
+        self.revealViewController().pushFrontViewController(commentsViewController, animated: true)
+        
     }
     
 

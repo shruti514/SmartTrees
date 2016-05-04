@@ -11,9 +11,22 @@ class CommentsViewController: UITableViewController {
     
     var items = [PFObject]()
     
+    
+    var rvc : SWRevealViewController!
+        
+    
+    @IBAction func openSlideMenu(sender: AnyObject) {
+        //rvc.pushFrontViewController(slideViewController, animated: true)
+        rvc.revealToggle(self)
+    }
+
+    
     @IBOutlet weak var segmentedView: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
+        rvc = self.revealViewController() as SWRevealViewController
+        
+        self.view.addGestureRecognizer(rvc.panGestureRecognizer())
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -168,7 +181,10 @@ class CommentsViewController: UITableViewController {
     func showAddCommentView(){
         let addCommentView = storyboard?.instantiateViewControllerWithIdentifier("AddCommentView") as! AddCommentView
         addCommentView.modalPresentationStyle = .OverCurrentContext
-        self.presentViewController(addCommentView, animated: true, completion: nil)
+        //self.presentViewController(addCommentView, animated: true, completion: nil)
+        
+        
+        self.revealViewController().pushFrontViewController(addCommentView, animated: true)
     
     }
     

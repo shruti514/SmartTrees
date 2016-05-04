@@ -18,11 +18,31 @@ import Parse
 
 class MusicPlayerController: UITableViewController {
     
+    var rvc : SWRevealViewController!
+   
+    @IBAction func home(sender: AnyObject) {
+        if let menuView = self.storyboard?.instantiateViewControllerWithIdentifier("SlideMenuConfig") as? SWRevealViewController {
+            
+            self.presentViewController(menuView, animated: true, completion: nil)
+        }
+    }
+
     
+    @IBAction func openSlideMenu(sender: AnyObject) {
+        //rvc.pushFrontViewController(slideViewController, animated: true)
+        rvc.revealToggle(self)
+    }
+
     var items = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        //rvc = self.revealViewController() as SWRevealViewController
+        
+       // self.view.addGestureRecognizer(rvc.panGestureRecognizer())
+        // Do any additional setup after loading the view.
+
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -39,7 +59,7 @@ class MusicPlayerController: UITableViewController {
     
     
     func loadDataFromParse(){
-        let query = PFQuery(className: "MusicMaster")
+        let query = PFQuery(className: "AudioFiles")
         query.orderByDescending("MusicDescription")
         query.limit = 10
         
@@ -52,6 +72,12 @@ class MusicPlayerController: UITableViewController {
         }
     }
     
+    @IBAction func navigateToHome(sender: AnyObject) {
+        if let menuView = self.storyboard?.instantiateViewControllerWithIdentifier("SlideMenuConfig") as? SWRevealViewController {
+            
+            self.presentViewController(menuView, animated: true, completion: nil)
+        }
+    }
     
     // MARK: - Table view data source
     

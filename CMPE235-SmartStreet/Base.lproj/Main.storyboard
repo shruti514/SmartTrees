@@ -409,7 +409,7 @@
                                 <rect key="frame" x="249" y="502" width="105" height="105"/>
                                 <state key="normal" backgroundImage="Comment-1"/>
                                 <connections>
-                                    <segue destination="2rl-2B-Xzv" kind="presentation" id="z7y-Zu-bn3"/>
+                                    <action selector="openCommentsScreen:" destination="kx9-GO-iVg" eventType="touchUpInside" id="VfJ-G9-PHn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJu-rh-tRj">
@@ -446,7 +446,7 @@
                                 <rect key="frame" x="249" y="123" width="105" height="105"/>
                                 <state key="normal" backgroundImage="InteractWithTrees-1"/>
                                 <connections>
-                                    <segue destination="r03-Dg-mU0" kind="show" id="oVW-rK-k3Y"/>
+                                    <action selector="openInteractWithTreesScreen:" destination="kx9-GO-iVg" eventType="touchUpInside" id="HUe-ta-J3b"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smart Streets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URy-lM-MEf">
@@ -629,6 +629,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYl-hZ-ErG">
                                 <rect key="frame" x="9" y="25" width="23" height="17"/>
                                 <state key="normal" backgroundImage="icon-menu"/>
+                                <connections>
+                                    <action selector="openSlideMenu:" destination="vz9-4E-GCi" eventType="touchUpInside" id="L8s-hI-0NQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smart Street" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qa0-Ex-P3Q">
                                 <rect key="frame" x="141" y="23" width="136" height="21"/>
@@ -990,10 +993,10 @@
             </objects>
             <point key="canvasLocation" x="2162" y="-1924"/>
         </scene>
-        <!--View Controller-->
+        <!--Interact With Trees View Controller-->
         <scene sceneID="hje-HI-YlA">
             <objects>
-                <viewController id="r03-Dg-mU0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InteractWithTreesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r03-Dg-mU0" customClass="InteractWithTreesViewController" customModule="CMPE235_SmartStreet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k39-dm-fXe"/>
                         <viewControllerLayoutGuide type="bottom" id="g3i-O8-Zd5"/>
@@ -1024,6 +1027,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wr-Cg-Bep">
                                 <rect key="frame" x="20" y="28" width="25" height="20"/>
                                 <state key="normal" backgroundImage="icon-menu"/>
+                                <connections>
+                                    <action selector="openSlideMenu:" destination="r03-Dg-mU0" eventType="touchUpInside" id="Dex-hP-XzZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFX-8c-soh">
                                 <rect key="frame" x="366" y="28" width="32" height="32"/>
@@ -1035,7 +1041,7 @@
                                     <color key="titleColor" red="0.16862745098039217" green="0.72549019607843135" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="5J4-cd-MCH" kind="show" id="55g-Xq-qHv"/>
+                                    <action selector="changeLights:" destination="r03-Dg-mU0" eventType="touchUpInside" id="7om-5W-eFH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smart Streets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRJ-uN-Ito">
@@ -1050,37 +1056,32 @@
                                     <color key="titleColor" red="0.16862745098039217" green="0.72549019607843135" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eJb-vq-7yp" kind="show" id="3wo-JC-hvD"/>
+                                    <segue destination="eJb-vq-7yp" kind="show" id="7QR-8u-MgT"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="changeMusic" destination="2JY-yV-3rB" id="AOv-Zv-HpP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gh4-nE-r4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="436" y="1014"/>
+            <point key="canvasLocation" x="428" y="912"/>
         </scene>
         <!--Music List-->
         <scene sceneID="POA-vk-zqk">
             <objects>
-                <tableViewController id="fWD-tt-QeK" customClass="MusicPlayerController" customModule="CMPE235_SmartStreet" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MusicPlayerController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fWD-tt-QeK" customClass="MusicPlayerController" customModule="CMPE235_SmartStreet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xqZ-Md-xj6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Saa-8I-8XD">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MusicPlayerCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicPlayerCell" id="svb-ln-aFE" customClass="MusicPlayerCell" customModule="CMPE235_SmartStreet" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Saa-8I-8XD" id="Wei-ao-fG4">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicPlayerCell" id="svb-ln-aFE" customClass="MusicPlayerCell" customModule="CMPE235_SmartStreet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="136" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="svb-ln-aFE" id="FPz-El-Jyg">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -1095,9 +1096,16 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNB-gc-INv">
                                             <rect key="frame" x="321" y="6" width="70" height="30"/>
                                             <state key="normal" title="Play"/>
+                                            <connections>
+                                                <action selector="onButtonPressed:" destination="svb-ln-aFE" eventType="touchUpInside" id="Qsg-Xi-oEQ"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="buttonLabel" destination="KNB-gc-INv" id="3Hi-Td-9cH"/>
+                                    <outlet property="titleLabel" destination="Ija-Kb-ytX" id="QXn-FY-ml6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1105,7 +1113,13 @@
                             <outlet property="delegate" destination="fWD-tt-QeK" id="QIn-Pf-v03"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Music List" id="lWK-J3-KFC"/>
+                    <navigationItem key="navigationItem" title="Music List" id="lWK-J3-KFC">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="44H-fR-VVy">
+                            <connections>
+                                <action selector="navigateToHome:" destination="fWD-tt-QeK" id="UdL-uH-aZ6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZhQ-QY-UjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1171,18 +1185,6 @@
                                 <color key="textColor" red="0.12941176470588237" green="0.13725490196078433" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tu-XH-tjc">
-                                <rect key="frame" x="160" y="660" width="71" height="71"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="71" id="WRd-kh-hah"/>
-                                    <constraint firstAttribute="width" constant="71" id="ZCE-yx-FAD"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Blue back arrowBack_Arrow.svg"/>
-                                <connections>
-                                    <action selector="renderHome:" destination="VWD-jE-1pJ" eventType="touchUpInside" id="NIP-PZ-I0b"/>
-                                    <segue destination="2j7-Wo-jBS" kind="unwind" unwindAction="unwindToMenuViewController:" id="bdK-sp-F0s"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aO0-d2-hIl" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="68" width="414" height="487"/>
                                 <subviews>
@@ -1197,6 +1199,18 @@
                                     <constraint firstItem="nx0-Ri-yeV" firstAttribute="leading" secondItem="aO0-d2-hIl" secondAttribute="leading" constant="150" id="U8N-dk-VLd"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tu-XH-tjc">
+                                <rect key="frame" x="179" y="675" width="57" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="WRd-kh-hah"/>
+                                    <constraint firstAttribute="width" constant="71" id="ZCE-yx-FAD"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Blue_Back_Arrow.svg"/>
+                                <connections>
+                                    <action selector="renderHome:" destination="VWD-jE-1pJ" eventType="touchUpInside" id="NIP-PZ-I0b"/>
+                                    <segue destination="2j7-Wo-jBS" kind="unwind" unwindAction="unwindToMenuViewController:" id="bdK-sp-F0s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1252,10 +1266,10 @@
             </objects>
             <point key="canvasLocation" x="1410" y="715"/>
         </scene>
-        <!--View Controller-->
+        <!--Lights Controller-->
         <scene sceneID="eIG-pp-I7p">
             <objects>
-                <viewController id="5J4-cd-MCH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LightsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5J4-cd-MCH" customClass="LightsController" customModule="CMPE235_SmartStreet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0tB-Sg-RaR"/>
                         <viewControllerLayoutGuide type="bottom" id="eoU-2d-jLF"/>
@@ -1282,7 +1296,49 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPu-HF-OZA">
                                 <rect key="frame" x="20" y="27" width="25" height="20"/>
                                 <state key="normal" backgroundImage="icon-menu"/>
+                                <connections>
+                                    <action selector="openSlideMenu:" destination="5J4-cd-MCH" eventType="touchUpInside" id="szc-lt-RIG"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dms-FA-ArR">
+                                <rect key="frame" x="155" y="159" width="105" height="105"/>
+                                <state key="normal" backgroundImage="RED"/>
+                                <connections>
+                                    <action selector="redButtonAction:" destination="5J4-cd-MCH" eventType="touchUpInside" id="2NX-aP-EE3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFH-fO-FDZ">
+                                <rect key="frame" x="155" y="330" width="105" height="105"/>
+                                <state key="normal" backgroundImage="GREEN"/>
+                                <connections>
+                                    <action selector="greenButtonAction:" destination="5J4-cd-MCH" eventType="touchUpInside" id="apm-CB-3Ru"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQK-jW-z5e">
+                                <rect key="frame" x="155" y="515" width="105" height="105"/>
+                                <state key="normal" backgroundImage="BLUE"/>
+                                <connections>
+                                    <action selector="blueButtonAction:" destination="5J4-cd-MCH" eventType="touchUpInside" id="slk-D8-nvh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adO-cr-xog">
+                                <rect key="frame" x="192" y="272" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3N-9Q-FX2">
+                                <rect key="frame" x="181" y="443" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1k-2y-FvN">
+                                <rect key="frame" x="191" y="628" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1482,21 +1538,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BlG-Lz-g0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939" y="1926"/>
+            <point key="canvasLocation" x="818" y="1701"/>
         </scene>
     </scenes>
     <resources>
         <image name="AboutTrees" width="130" height="130"/>
         <image name="AudioBlue" width="366" height="150"/>
+        <image name="BLUE" width="390" height="390"/>
         <image name="Background2" width="414" height="736"/>
-        <image name="Blue back arrowBack_Arrow.svg" width="105" height="105"/>
         <image name="Blue_Back_Arrow.svg" width="78" height="78"/>
         <image name="Comment-1" width="390" height="390"/>
+        <image name="GREEN" width="390" height="390"/>
+        <image name="GreenSignInEmailButton" width="720" height="132"/>
+        <image name="GreenSignUpEmail" width="720" height="132"/>
         <image name="Horizontal Line Separator " width="363" height="2"/>
         <image name="InteractWithTrees-1" width="130" height="130"/>
         <image name="Location" width="390" height="390"/>
         <image name="PhotoGreen" width="366" height="150"/>
         <image name="PhotoVideo" width="390" height="390"/>
+        <image name="RED" width="390" height="390"/>
         <image name="Rectangle 2" width="414" height="411"/>
         <image name="ScanQRCode" width="366" height="150"/>
         <image name="Share-1" width="390" height="390"/>

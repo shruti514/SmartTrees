@@ -9,7 +9,13 @@ import Cosmos
 import Firebase
 class AddCommentView: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
+    var rvc : SWRevealViewController!
    
+    
+    @IBAction func openSlideMenu(sender: AnyObject) {
+        //rvc.pushFrontViewController(slideViewController, animated: true)
+        rvc.revealToggle(self)
+    }
 
     var avatarUrl:PFFile!
 
@@ -44,15 +50,21 @@ class AddCommentView: UIViewController {
             }
         }
         
-        if let commentsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("CommentsViewController") as? CommentsViewController {
-            
-            self.presentViewController(commentsViewController, animated: true, completion: nil)
-        }
+        let commentsViewController = storyboard?.instantiateViewControllerWithIdentifier("CommentsViewController") as! CommentsViewController
+        commentsViewController.modalPresentationStyle = .OverCurrentContext
+        // self.presentViewController(commentsViewController, animated: true, completion: nil)
         
+        
+        self.revealViewController().pushFrontViewController(commentsViewController, animated: true)
+                
     }
   
     
     override func viewDidLoad(){
+        super.viewDidLoad()
+        rvc = self.revealViewController() as SWRevealViewController
+        
+        self.view.addGestureRecognizer(rvc.panGestureRecognizer())
         if PFUser.currentUser() != nil {
             let dateformatter = NSDateFormatter()
             

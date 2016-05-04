@@ -10,52 +10,26 @@ import UIKit
 import Parse
 
 class LightsController: UIViewController {
-    
-    func blueButtonClicked(){
+    var rvc : SWRevealViewController!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        rvc = self.revealViewController() as SWRevealViewController
         
-        let currentUser = PFUser.currentUser()
-        let userInteraction = PFObject(className: "UserInteraction")
-        userInteraction["UserId"] = currentUser!["objectId"]
-        userInteraction["MusicSelection"] = "NONE"
-        userInteraction["LightSelection"] = "BLUE"
-        userInteraction["Date"] = NSDate()
-        userInteraction["Type"]="Light"
-        
-        userInteraction.saveInBackgroundWithBlock({ (success:Bool, error:NSError?) in
-            if(success){
-                print("User interaction added to database.")
-            }else{
-                print("Error occured while adding a user interaction.")
-            }
-        })
-        
+        self.view.addGestureRecognizer(rvc.panGestureRecognizer())
+        // Do any additional setup after loading the view.
     }
+
     
-    func greenButtonClicked(){
-        
-        let currentUser = PFUser.currentUser()
-        let userInteraction = PFObject(className: "UserInteraction")
-        userInteraction["UserId"] = currentUser!["objectId"]
-        userInteraction["MusicSelection"] = "NONE"
-        userInteraction["LightSelection"] = "GREEN"
-        userInteraction["Date"] = NSDate()
-        userInteraction["Type"]="Light"
-        
-        userInteraction.saveInBackgroundWithBlock({ (success:Bool, error:NSError?) in
-            if(success){
-                print("User interaction added to database.")
-            }else{
-                print("Error occured while adding a user interaction.")
-            }
-        })
-        
+    @IBAction func openSlideMenu(sender: AnyObject) {
+        //rvc.pushFrontViewController(slideViewController, animated: true)
+        rvc.revealToggle(self)
     }
+
     
-    func redButtonClicked(){
-        
+    @IBAction func redButtonAction(sender: AnyObject) {
         let currentUser = PFUser.currentUser()
         let userInteraction = PFObject(className: "UserInteraction")
-        userInteraction["UserId"] = currentUser!["objectId"]
+        userInteraction["UserId"] = currentUser!["username"]
         userInteraction["MusicSelection"] = "NONE"
         userInteraction["LightSelection"] = "RED"
         userInteraction["Date"] = NSDate()
@@ -68,7 +42,42 @@ class LightsController: UIViewController {
                 print("Error occured while adding a user interaction.")
             }
         })
-        
     }
     
-}
+    
+    @IBAction func blueButtonAction(sender: AnyObject) {
+        let currentUser = PFUser.currentUser()
+        let userInteraction = PFObject(className: "UserInteraction")
+        userInteraction["UserId"] = currentUser!["username"]
+        userInteraction["MusicSelection"] = "NONE"
+        userInteraction["LightSelection"] = "BLUE"
+        userInteraction["Date"] = NSDate()
+        userInteraction["Type"]="Light"
+        
+        userInteraction.saveInBackgroundWithBlock({ (success:Bool, error:NSError?) in
+            if(success){
+                print("User interaction added to database.")
+            }else{
+                print("Error occured while adding a user interaction.")
+            }
+        })
+
+    }
+    
+    @IBAction func greenButtonAction(sender: AnyObject) {
+        let currentUser = PFUser.currentUser()
+        let userInteraction = PFObject(className: "UserInteraction")
+        userInteraction["UserId"] = currentUser!["username"]
+        userInteraction["MusicSelection"] = "NONE"
+        userInteraction["LightSelection"] = "GREEN"
+        userInteraction["Date"] = NSDate()
+        userInteraction["Type"]="Light"
+        
+        userInteraction.saveInBackgroundWithBlock({ (success:Bool, error:NSError?) in
+            if(success){
+                print("User interaction added to database.")
+            }else{
+                print("Error occured while adding a user interaction.")
+            }
+        })
+    }}
