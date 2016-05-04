@@ -15,7 +15,7 @@ class LightsController: UIViewController {
         
         let currentUser = PFUser.currentUser()
         let userInteraction = PFObject(className: "UserInteraction")
-        userInteraction["UserId"] = currentUser.id
+        userInteraction["UserId"] = currentUser!["objectId"]
         userInteraction["MusicSelection"] = "NONE"
         userInteraction["LightSelection"] = "BLUE"
         userInteraction["Date"] = NSDate()
@@ -35,7 +35,7 @@ class LightsController: UIViewController {
         
         let currentUser = PFUser.currentUser()
         let userInteraction = PFObject(className: "UserInteraction")
-        userInteraction["UserId"] = currentUser.id
+        userInteraction["UserId"] = currentUser!["objectId"]
         userInteraction["MusicSelection"] = "NONE"
         userInteraction["LightSelection"] = "GREEN"
         userInteraction["Date"] = NSDate()
@@ -55,7 +55,7 @@ class LightsController: UIViewController {
         
         let currentUser = PFUser.currentUser()
         let userInteraction = PFObject(className: "UserInteraction")
-        userInteraction["UserId"] = currentUser.id
+        userInteraction["UserId"] = currentUser!["objectId"]
         userInteraction["MusicSelection"] = "NONE"
         userInteraction["LightSelection"] = "RED"
         userInteraction["Date"] = NSDate()
