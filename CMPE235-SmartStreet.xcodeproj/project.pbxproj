@@ -56,6 +56,7 @@
 		A19AC7751C86AF0300BCABA0 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7741C86AF0300BCABA0 /* Location.swift */; };
 		A19AC7791C86AF1600BCABA0 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7761C86AF1600BCABA0 /* Time.swift */; };
 		A19AC77B1C86AF1600BCABA0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7781C86AF1600BCABA0 /* Utils.swift */; };
+		A1A445991CD992E500EA7A90 /* LightsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A445981CD992E500EA7A90 /* LightsController.swift */; };
 		A1AD05481C98D629006C95CA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AD05471C98D629006C95CA /* MobileCoreServices.framework */; };
 		A1AFC5101CCE85C800208F9C /* InteractWithTreesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AFC50F1CCE85C800208F9C /* InteractWithTreesViewController.swift */; };
 		A1BBFB6D1C8423C7004CE984 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -165,6 +166,7 @@
 		A19AC7741C86AF0300BCABA0 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		A19AC7761C86AF1600BCABA0 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		A19AC7781C86AF1600BCABA0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A1A445981CD992E500EA7A90 /* LightsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsController.swift; sourceTree = "<group>"; };
 		A1AD05471C98D629006C95CA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A1AFC50F1CCE85C800208F9C /* InteractWithTreesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractWithTreesViewController.swift; sourceTree = "<group>"; };
 		A1BBFBF11C84326E004CE984 /* NearbyLocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyLocationsViewController.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 				A1AFC50F1CCE85C800208F9C /* InteractWithTreesViewController.swift */,
 				A1C0B9B91CD3E39300B2892D /* MusicPlayerController.swift */,
 				A1C0B9BB1CD3E3C300B2892D /* MusicPlayerCell.swift */,
+				A1A445981CD992E500EA7A90 /* LightsController.swift */,
 			);
 			name = InteractWithTrees;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				A1D8EDA11C80228C002D0559 /* Resources */,
 				6567A05271FCE4B9ECFAF75D /* 📦 Embed Pods Frameworks */,
 				4C2365250BFB3CF40671B406 /* 📦 Copy Pods Resources */,
+				B6A0F865D74B3E188BFE2645 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -693,6 +697,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CMPE235-SmartStreetUITests/Pods-CMPE235-SmartStreetUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B6A0F865D74B3E188BFE2645 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C1DD6103B94805448AC7D1F2 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -730,6 +749,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A445991CD992E500EA7A90 /* LightsController.swift in Sources */,
 				A19AC7791C86AF1600BCABA0 /* Time.swift in Sources */,
 				A1609B3D1C8F5FB200759CF7 /* ShareModalViewController.swift in Sources */,
 				A19AC76B1C86AEE900BCABA0 /* GoogleDirectionsRouteFare.swift in Sources */,

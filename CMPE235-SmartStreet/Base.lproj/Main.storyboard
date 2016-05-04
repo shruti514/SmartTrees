@@ -1074,7 +1074,7 @@
             </objects>
             <point key="canvasLocation" x="436" y="1014"/>
         </scene>
-        <!--jhjkhj-->
+        <!--Music List-->
         <scene sceneID="POA-vk-zqk">
             <objects>
                 <tableViewController id="fWD-tt-QeK" customClass="MusicPlayerController" customModule="CMPE235_SmartStreet" customModuleProvider="target" sceneMemberID="viewController">
@@ -1117,7 +1117,7 @@
                             <outlet property="delegate" destination="fWD-tt-QeK" id="QIn-Pf-v03"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="jhjkhj" id="lWK-J3-KFC"/>
+                    <navigationItem key="navigationItem" title="Music List" id="lWK-J3-KFC"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZhQ-QY-UjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
