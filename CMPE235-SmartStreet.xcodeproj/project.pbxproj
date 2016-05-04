@@ -57,6 +57,7 @@
 		A19AC7791C86AF1600BCABA0 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7761C86AF1600BCABA0 /* Time.swift */; };
 		A19AC77B1C86AF1600BCABA0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19AC7781C86AF1600BCABA0 /* Utils.swift */; };
 		A1A445991CD992E500EA7A90 /* LightsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A445981CD992E500EA7A90 /* LightsController.swift */; };
+		A1A4459B1CDA3A4F00EA7A90 /* LaunchScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4459A1CDA3A4F00EA7A90 /* LaunchScreenController.swift */; };
 		A1AD05481C98D629006C95CA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AD05471C98D629006C95CA /* MobileCoreServices.framework */; };
 		A1AFC5101CCE85C800208F9C /* InteractWithTreesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AFC50F1CCE85C800208F9C /* InteractWithTreesViewController.swift */; };
 		A1BBFB6D1C8423C7004CE984 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -167,6 +168,7 @@
 		A19AC7761C86AF1600BCABA0 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		A19AC7781C86AF1600BCABA0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A1A445981CD992E500EA7A90 /* LightsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsController.swift; sourceTree = "<group>"; };
+		A1A4459A1CDA3A4F00EA7A90 /* LaunchScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenController.swift; sourceTree = "<group>"; };
 		A1AD05471C98D629006C95CA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A1AFC50F1CCE85C800208F9C /* InteractWithTreesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractWithTreesViewController.swift; sourceTree = "<group>"; };
 		A1BBFBF11C84326E004CE984 /* NearbyLocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyLocationsViewController.swift; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 				A13FC8E31CA8C90900C9DEC7 /* CommentTableViewCell.swift */,
 				A13FC8E51CA8D4A400C9DEC7 /* AddCommentView.swift */,
 				A1D402191CA9E45A00E4C9A8 /* QRRegisterViewController.swift */,
+				A1A4459A1CDA3A4F00EA7A90 /* LaunchScreenController.swift */,
 			);
 			path = "CMPE235-SmartStreet";
 			sourceTree = "<group>";
@@ -795,6 +798,7 @@
 				A1FC18F51C839F1900D5A663 /* SignUpViewController.swift in Sources */,
 				A19AC77B1C86AF1600BCABA0 /* Utils.swift in Sources */,
 				A19AC7671C86AEE900BCABA0 /* GoogleDirectionsDuration.swift in Sources */,
+				A1A4459B1CDA3A4F00EA7A90 /* LaunchScreenController.swift in Sources */,
 				A1BBFBF81C843A71004CE984 /* GooglePlace.swift in Sources */,
 				A19AC7661C86AEE900BCABA0 /* GoogleDirectionsDistance.swift in Sources */,
 			);

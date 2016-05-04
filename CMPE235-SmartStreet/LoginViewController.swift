@@ -13,6 +13,7 @@
     import ParseFacebookUtilsV4
     
     class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+        @IBOutlet weak var greetingsLabel: UILabel!
        
         let facebookLogin = FBSDKLoginManager()
         let permissions=["public_profile", "email", "user_friends"]
@@ -24,6 +25,12 @@
         
         override func viewWillAppear(animated: Bool) {
             if (PFUser.currentUser() != nil) {
+                
+                let username = PFUser.currentUser()?["username"] as! String
+                self.greetingsLabel.text = username
+                self.greetingsLabel.hidden = false
+
+
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     if let menuView = self.storyboard?.instantiateViewControllerWithIdentifier("SlideMenuConfig") as? SWRevealViewController {
                         
