@@ -62,7 +62,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCu-q0-Xiy">
                                 <rect key="frame" x="79" y="464" width="244" height="50"/>
-                                <state key="normal" backgroundImage="GreenSignInEmailButton"/>
+                                <state key="normal" backgroundImage="signupemail"/>
                                 <connections>
                                     <action selector="signIn:" destination="Zmg-zc-Rky" eventType="touchUpInside" id="lYq-99-ijR"/>
                                 </connections>
@@ -285,22 +285,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdz-Uj-mnX">
-                                <rect key="frame" x="188" y="690" width="38" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GH-t2-6JW">
                                 <rect key="frame" x="76" y="533" width="244" height="50"/>
-                                <state key="normal" backgroundImage="GreenSignUpEmail"/>
+                                <state key="normal" backgroundImage="signupemail"/>
                                 <connections>
                                     <action selector="register:" destination="ntc-2V-MgQ" eventType="touchUpInside" id="UCb-dG-f9W"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blue_Back_Arrow.svg" translatesAutoresizingMaskIntoConstraints="NO" id="O3o-RZ-Q4E">
-                                <rect key="frame" x="171" y="613" width="72" height="72"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="if8-Ql-6On">
                                 <rect key="frame" x="161" y="71" width="93" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -338,6 +329,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blue_Back_Arrow.svg" translatesAutoresizingMaskIntoConstraints="NO" id="O3o-RZ-Q4E">
+                                <rect key="frame" x="171" y="625" width="72" height="72"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -551,12 +545,6 @@
                                     <segue destination="4xQ-pz-c81" kind="unwind" unwindAction="unwindToMenuViewController:" id="edr-YR-Vri"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clI-AT-g9Q">
-                                <rect key="frame" x="188" y="691" width="38" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -702,15 +690,15 @@
                                 <state key="normal" backgroundImage="icon-menu"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZr-gR-GTc">
-                                <rect key="frame" x="89" y="287" width="49" height="30"/>
-                                <state key="normal" title="Record"/>
+                                <rect key="frame" x="272" y="221" width="70" height="70"/>
+                                <state key="normal" backgroundImage="record"/>
                                 <connections>
                                     <action selector="Record:" destination="zu3-2Z-IeK" eventType="touchUpInside" id="8jp-Gr-cZl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E15-r4-OXc">
-                                <rect key="frame" x="284" y="287" width="30" height="30"/>
-                                <state key="normal" title="Play"/>
+                                <rect key="frame" x="44" y="221" width="70" height="70"/>
+                                <state key="normal" backgroundImage="play"/>
                                 <connections>
                                     <action selector="PlaySound:" destination="zu3-2Z-IeK" eventType="touchUpInside" id="mdv-62-Gbq"/>
                                 </connections>
@@ -722,19 +710,19 @@
                                     <action selector="goBack:" destination="zu3-2Z-IeK" eventType="touchUpInside" id="5Tb-fe-XOe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIa-z1-47N">
-                                <rect key="frame" x="47" y="372" width="72" height="61"/>
-                                <state key="normal" backgroundImage="facebook icon"/>
-                                <connections>
-                                    <action selector="shareAudio:" destination="zu3-2Z-IeK" eventType="touchUpInside" id="7Z2-B4-Bwd"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Sa-yW-HJ6">
-                                <rect key="frame" x="270" y="372" width="72" height="61"/>
+                                <rect key="frame" x="272" y="428" width="70" height="70"/>
                                 <state key="normal" backgroundImage="sharebymail"/>
                                 <connections>
                                     <action selector="shareAudio:" destination="zu3-2Z-IeK" eventType="touchUpInside" id="DFi-hB-Duw"/>
                                     <action selector="shareByEmail:" destination="zu3-2Z-IeK" eventType="touchUpInside" id="sP5-NK-BYQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIa-z1-47N">
+                                <rect key="frame" x="51" y="428" width="70" height="70"/>
+                                <state key="normal" backgroundImage="facebook icon"/>
+                                <connections>
+                                    <action selector="shareAudio:" destination="zu3-2Z-IeK" eventType="touchUpInside" id="7Z2-B4-Bwd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1504,8 +1492,6 @@
         <image name="Blue back arrowBack_Arrow.svg" width="105" height="105"/>
         <image name="Blue_Back_Arrow.svg" width="78" height="78"/>
         <image name="Comment-1" width="390" height="390"/>
-        <image name="GreenSignInEmailButton" width="720" height="132"/>
-        <image name="GreenSignUpEmail" width="720" height="132"/>
         <image name="Horizontal Line Separator " width="363" height="2"/>
         <image name="InteractWithTrees-1" width="130" height="130"/>
         <image name="Location" width="390" height="390"/>
@@ -1532,9 +1518,12 @@
         <image name="latestBluebackground" width="414" height="736"/>
         <image name="latestBluegradientbackground" width="414" height="736"/>
         <image name="people" width="320" height="220"/>
+        <image name="play" width="390" height="390"/>
         <image name="qrcode.for website" width="200" height="200"/>
+        <image name="record" width="390" height="390"/>
         <image name="sharebymail" width="118" height="118"/>
         <image name="signout2" width="200" height="222"/>
+        <image name="signupemail" width="801" height="132"/>
         <image name="social" width="512" height="512"/>
     </resources>
 </document>
