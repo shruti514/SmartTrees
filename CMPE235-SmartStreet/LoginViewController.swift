@@ -40,6 +40,37 @@
             }
         }
         
+        @IBAction func loginAsaGuestUser(sender: AnyObject) {
+            
+            self.signIn("GuestUser",password: "cmpe235test")
+        }
+        
+        
+        func signIn(username:String, password:String) {
+            
+            
+            PFUser.logInWithUsernameInBackground(username, password: password, block: { (user, error) -> Void in
+                if ((user) != nil) {
+                    let alert = UIAlertView(title: "Success", message: "Logged In", delegate: self, cancelButtonTitle: "OK")
+                    alert.show()
+                    
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        if let menuView = self.storyboard?.instantiateViewControllerWithIdentifier("SlideMenuConfig") as? SWRevealViewController {
+                            
+                            
+                            self.presentViewController(menuView, animated: true, completion: nil)
+                        }
+                    })
+                    
+                } else {
+                    let alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                    alert.show()
+                }
+            })
+            
+        }
+        
+        
         
         override func viewDidLoad() {
             

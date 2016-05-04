@@ -52,7 +52,7 @@
                                 <rect key="frame" x="32" y="382" width="350" height="40"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Username" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Uc7-GZ-Ft7">
                                 <rect key="frame" x="32" y="298" width="350" height="40"/>
@@ -61,8 +61,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCu-q0-Xiy">
-                                <rect key="frame" x="79" y="464" width="244" height="50"/>
-                                <state key="normal" backgroundImage="signupemail"/>
+                                <rect key="frame" x="114" y="474" width="158" height="51"/>
+                                <color key="backgroundColor" red="0.56862745098039214" green="0.75294117647058822" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Sign In ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="signIn:" destination="Zmg-zc-Rky" eventType="touchUpInside" id="lYq-99-ijR"/>
                                 </connections>
@@ -83,7 +87,7 @@
         <!--LoginPage-->
         <scene sceneID="QEc-6f-gDc">
             <objects>
-                <viewController title="LoginPage" id="709-v5-y5W" customClass="LoginViewController" customModule="CMPE235_SmartStreet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" title="LoginPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="709-v5-y5W" customClass="LoginViewController" customModule="CMPE235_SmartStreet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yH7-yH-OP2"/>
                         <viewControllerLayoutGuide type="bottom" id="mEF-Wn-BlZ"/>
@@ -97,33 +101,33 @@
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfH-VH-37c">
-                                <rect key="frame" x="150" y="562" width="114" height="30"/>
-                                <state key="normal" title="Login With Email"/>
+                                <rect key="frame" x="19" y="613" width="148" height="30"/>
+                                <state key="normal" title="Login With Username"/>
                                 <connections>
                                     <action selector="loginWithEmail:" destination="709-v5-y5W" eventType="touchUpInside" id="T0g-cp-kwP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pi8-GF-3pd">
-                                <rect key="frame" x="120" y="648" width="175" height="30"/>
+                                <rect key="frame" x="120" y="668" width="175" height="30"/>
                                 <state key="normal" title="New User? Register Now!"/>
                                 <connections>
                                     <action selector="register:" destination="709-v5-y5W" eventType="touchUpInside" id="qnw-Q9-bSR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smart Streets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbG-jI-ZzJ">
-                                <rect key="frame" x="113" y="324" width="172" height="73"/>
+                                <rect key="frame" x="130" y="325" width="172" height="73"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9U-hy-isX">
-                                <rect key="frame" x="113" y="295" width="117" height="21"/>
+                                <rect key="frame" x="125" y="295" width="117" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohn-iM-6uQ">
-                                <rect key="frame" x="228" y="295" width="36" height="22.5"/>
+                                <rect key="frame" x="244" y="295" width="36" height="22.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -134,6 +138,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MI4-pT-Wl1">
+                                <rect key="frame" x="210" y="613" width="151" height="30"/>
+                                <state key="normal" title="Login as a Guest User"/>
+                                <connections>
+                                    <action selector="loginAsaGuestUser:" destination="709-v5-y5W" eventType="touchUpInside" id="oTF-eh-r7C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
@@ -197,12 +208,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHQ-DA-cXz">
-                                <rect key="frame" x="65" y="516" width="160" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcb-r0-MKr">
                                 <rect key="frame" x="65" y="270" width="50" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -254,6 +259,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signout2" translatesAutoresizingMaskIntoConstraints="NO" id="l2z-6i-LNz">
                                 <rect key="frame" x="20" y="512" width="28" height="30"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f83-JI-1fU">
+                                <rect key="frame" x="56" y="512" width="102" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutaction:" destination="VdJ-A3-vTt" eventType="touchUpInside" id="q5Q-CC-ISd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -304,13 +319,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GH-t2-6JW">
-                                <rect key="frame" x="76" y="533" width="244" height="50"/>
-                                <state key="normal" backgroundImage="signupemail"/>
-                                <connections>
-                                    <action selector="register:" destination="ntc-2V-MgQ" eventType="touchUpInside" id="UCb-dG-f9W"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="if8-Ql-6On">
                                 <rect key="frame" x="161" y="71" width="93" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -351,6 +359,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blue_Back_Arrow.svg" translatesAutoresizingMaskIntoConstraints="NO" id="O3o-RZ-Q4E">
                                 <rect key="frame" x="171" y="625" width="72" height="72"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GH-t2-6JW">
+                                <rect key="frame" x="118" y="528" width="178" height="50"/>
+                                <color key="backgroundColor" red="0.69411764705882351" green="0.81568627450980391" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="register:" destination="ntc-2V-MgQ" eventType="touchUpInside" id="UCb-dG-f9W"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1599,7 +1618,6 @@
         <image name="record" width="390" height="390"/>
         <image name="sharebymail" width="118" height="118"/>
         <image name="signout2" width="200" height="222"/>
-        <image name="signupemail" width="801" height="132"/>
         <image name="social" width="512" height="512"/>
     </resources>
 </document>

@@ -11,6 +11,7 @@ import Firebase
 
 class SlideViewController: UIViewController {
 
+    @IBOutlet var logout: [UILabel]!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     
@@ -24,7 +25,21 @@ class SlideViewController: UIViewController {
         }
         
     }
+    @IBAction func logoutaction(sender: AnyObject) {
+        // Send a request to log out a user
+        PFUser.logOut()
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            if let loginview = self.storyboard?.instantiateViewControllerWithIdentifier("LoginView") as? LoginViewController {
+                
+                
+                self.presentViewController(loginview, animated: true, completion: nil)
+            }
+
+        })
+    }
     
+    @IBOutlet var signout: [UILabel]!
     @IBOutlet weak var emailIdLabel: UILabel!
    
     
