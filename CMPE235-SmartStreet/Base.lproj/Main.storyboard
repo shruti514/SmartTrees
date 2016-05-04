@@ -723,15 +723,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIa-z1-47N">
-                                <rect key="frame" x="47" y="417" width="134" height="30"/>
-                                <state key="normal" title="Share On Facebook"/>
+                                <rect key="frame" x="47" y="372" width="72" height="61"/>
+                                <state key="normal" backgroundImage="facebook icon"/>
                                 <connections>
                                     <action selector="shareAudio:" destination="zu3-2Z-IeK" eventType="touchUpInside" id="7Z2-B4-Bwd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Sa-yW-HJ6">
-                                <rect key="frame" x="262" y="417" width="102" height="30"/>
-                                <state key="normal" title="Share By Email"/>
+                                <rect key="frame" x="270" y="372" width="72" height="61"/>
+                                <state key="normal" backgroundImage="sharebymail"/>
                                 <connections>
                                     <action selector="shareAudio:" destination="zu3-2Z-IeK" eventType="touchUpInside" id="DFi-hB-Duw"/>
                                     <action selector="shareByEmail:" destination="zu3-2Z-IeK" eventType="touchUpInside" id="sP5-NK-BYQ"/>
@@ -927,7 +927,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEK-EM-jIf">
                                 <rect key="frame" x="20" y="677" width="100" height="39"/>
-                                <state key="normal" backgroundImage="Audio">
+                                <state key="normal" backgroundImage="AudioBlue">
                                     <color key="titleColor" red="0.12941176470588237" green="0.13725490196078433" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -936,7 +936,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvB-9G-PIJ">
                                 <rect key="frame" x="157" y="677" width="100" height="39"/>
-                                <state key="normal" backgroundImage="Photo-1">
+                                <state key="normal" backgroundImage="PhotoGreen">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -980,7 +980,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gq2-3S-Hje">
                                 <rect key="frame" x="294" y="677" width="100" height="39"/>
-                                <state key="normal" backgroundImage="Video">
+                                <state key="normal" backgroundImage="VideoBlue">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -1042,8 +1042,8 @@
                                 <state key="normal" backgroundImage="add-user-White"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdj-vU-Qxx">
-                                <rect key="frame" x="148" y="212" width="99" height="30"/>
-                                <state key="normal" title="Change Lights">
+                                <rect key="frame" x="139" y="229" width="120" height="50"/>
+                                <state key="normal" backgroundImage="changecolor">
                                     <color key="titleColor" red="0.16862745098039217" green="0.72549019607843135" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -1057,8 +1057,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JY-yV-3rB">
-                                <rect key="frame" x="148" y="419" width="98" height="30"/>
-                                <state key="normal" title="Change Music">
+                                <rect key="frame" x="141" y="394" width="120" height="50"/>
+                                <state key="normal" backgroundImage="changemusic">
                                     <color key="titleColor" red="0.16862745098039217" green="0.72549019607843135" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -1494,12 +1494,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BlG-Lz-g0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921" y="1470"/>
+            <point key="canvasLocation" x="939" y="1926"/>
         </scene>
     </scenes>
     <resources>
         <image name="AboutTrees" width="130" height="130"/>
-        <image name="Audio" width="122" height="50"/>
+        <image name="AudioBlue" width="366" height="150"/>
         <image name="Background2" width="414" height="736"/>
         <image name="Blue back arrowBack_Arrow.svg" width="105" height="105"/>
         <image name="Blue_Back_Arrow.svg" width="78" height="78"/>
@@ -1509,15 +1509,17 @@
         <image name="Horizontal Line Separator " width="363" height="2"/>
         <image name="InteractWithTrees-1" width="130" height="130"/>
         <image name="Location" width="390" height="390"/>
-        <image name="Photo-1" width="122" height="50"/>
+        <image name="PhotoGreen" width="366" height="150"/>
         <image name="PhotoVideo" width="390" height="390"/>
         <image name="Rectangle 2" width="414" height="411"/>
         <image name="ScanQRCode" width="366" height="150"/>
         <image name="Share-1" width="390" height="390"/>
         <image name="SubmitButton" width="366" height="150"/>
-        <image name="Video" width="122" height="50"/>
+        <image name="VideoBlue" width="315" height="150"/>
         <image name="WhiteBAckground" width="414" height="736"/>
         <image name="add-user-White" width="72" height="67"/>
+        <image name="changecolor" width="390" height="150"/>
+        <image name="changemusic" width="390" height="165"/>
         <image name="color ref" width="283" height="736"/>
         <image name="default_marker.png" width="22" height="39"/>
         <image name="edit profile" width="340" height="340"/>
